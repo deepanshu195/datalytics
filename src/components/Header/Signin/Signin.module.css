@@ -1,0 +1,33 @@
+.Google_btn {
+  display: block;
+  width: 59%;
+  height: 60px;
+  margin: auto;
+  text-align: center;
+  padding: auto;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.Github_btn {
+  display: block;
+  width: 60%;
+  height: 60px;
+  margin: auto;
+  text-align: center;
+  padding: auto;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.Github {
+  width: 100%;
+  border: none;
+  padding: none;
+  margin: none;
+  background: transparent;
+}
+
+.Signin_Content {
+  height: fit-content;
+}
