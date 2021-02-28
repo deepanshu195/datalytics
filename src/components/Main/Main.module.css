@@ -1,0 +1,25 @@
+.laptop_image {
+  /* max-width: 300px;
+  max-height: 300px; */
+  width: 45vw;
+  object-fit: contain;
+}
+/* 1100-900 17vw , above-18vw,900-760 16vw , 644-56 0    
+
+*/
+.laptop_carousel_images {
+  /* width: 100px;
+  height: 100px; */
+  height: 19vw;
+  object-fit: contain;
+}
+
+.laptop_carousel_images_div {
+  position: absolute;
+  top: 9vw;
+  left: 5vw;
+  width: 34vw;
+}
+.LaptopCarousel {
+  position: relative;
+}
