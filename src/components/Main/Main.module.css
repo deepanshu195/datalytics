@@ -10,16 +10,27 @@
 .laptop_carousel_images {
   /* width: 100px;
   height: 100px; */
-  height: 19vw;
+  height: 16vw;
   object-fit: contain;
 }
 
 .laptop_carousel_images_div {
   position: absolute;
-  top: 9vw;
-  left: 5vw;
-  width: 34vw;
+  top: 7vw;
+  left: 9vw;
+  width: 31vw;
 }
 .LaptopCarousel {
   position: relative;
+}
+.main_heading {
+}
+.break {
+}
+.main_description {
+}
+.section_1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 5vw;
 }
