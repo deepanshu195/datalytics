@@ -19,16 +19,82 @@ const useStyles = makeStyles((theme) => ({
 const Stepper = (props) => {
   const classes = useStyles();
 
-  const [stage, setStage] = useState({});
+  // State
+
+  // Side Stepper
+  const [stage, setStage] = useState(0);
+
+  // Profile Setup
+  const [profileActive, setProfileActive] = useState(false);
+  const [jobDetail, setJobDetail] = useState({
+    role: "",
+    dept: "",
+  });
+
+  const nextStageHandler = () => {
+    setStage(stage + 1);
+  };
+
+  const checkProfieActive = (detailObj) => {
+    let profileActive = true;
+    Object.keys(detailObj).map((key) => {
+      if (typeof detailObj[key] === "string" && detailObj[key] === "")
+        profileActive = false;
+    });
+    return profileActive;
+  };
+
+  const jobDetailChangeHandler = (detailObj) => {
+    const newJobDetail = {
+      ...jobDetail,
+      [detailObj.type]: detailObj.value,
+    };
+    setJobDetail(newJobDetail);
+    setProfileActive(checkProfieActive(newJobDetail));
+  };
+
+  // Getting Started
+  const [enroll, setEnroll] = useState(false);
+
+  const enrollChangeHandler = (event) => {
+    setEnroll(event.target.checked);
+  };
+
+  let mainContent = null;
+  switch (stage) {
+    case 0:
+      mainContent = <Welcome nextStage={nextStageHandler} />;
+      break;
+    case 1:
+      mainContent = (
+        <ProfileSetup
+          nextStage={nextStageHandler}
+          jobDetail={jobDetail}
+          handleJobDetailChange={jobDetailChangeHandler}
+          nextActive={profileActive}
+        />
+      );
+      break;
+    case 2:
+      mainContent = (
+        <GettingStarted
+          enroll={enroll}
+          handleEnrollChange={enrollChangeHandler}
+        />
+      );
+      break;
+    default:
+      mainContent = null;
+  }
 
   return (
     <React.Fragment>
       <Grid container spacing={2} className={classes.root}>
         <Grid item xs={2}>
-          <SideStepper />
+          <SideStepper stage={stage} />
         </Grid>
         <Grid item xs={10}>
-          <GettingStarted />
+          {mainContent}
         </Grid>
       </Grid>
     </React.Fragment>

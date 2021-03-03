@@ -50,7 +50,12 @@ function Welcome(props) {
         </Grid>
       </Grid>
       <div className={classes.button}>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab
+          variant="extended"
+          color="primary"
+          aria-label="add"
+          onClick={props.nextStage}
+        >
           Next <ArrowForwardIosIcon />
         </Fab>
       </div>

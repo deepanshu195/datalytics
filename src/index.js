@@ -10,12 +10,10 @@ import { Provider } from "react-redux";
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<Provider store={createStoreWithMiddleware(rootReducer)}>
-        		<App />
-    		</Provider>
-		</BrowserRouter>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <BrowserRouter>
+    <Provider store={createStoreWithMiddleware(rootReducer)}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

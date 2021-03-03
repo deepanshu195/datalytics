@@ -35,13 +35,14 @@ function SideStepper(props) {
         Setting Up Your Workspace
       </Typography>
       <Grid container justify="center" direction="column" spacing={1}>
-        {Object.keys(labelConstants).map((key) => {
+        {Object.keys(labelConstants).map((key, index) => {
           return (
             <Grid key={key} item xs={12}>
               <Paper
                 style={{
                   height: 50,
-                  backgroundColor: "lightblue",
+                  backgroundColor:
+                    index < props.stage ? "lightblue" : "whitesmoke",
                   textAlign: "center",
                   verticalAlign: "middle",
                   position: "relative",

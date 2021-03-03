@@ -47,19 +47,33 @@ function GettingStarted(props) {
               We take our performance seriously.
             </Typography>
             <Grid
-              xs={12}
-              style={{ top: "30%", position: "relative", left: "30%" }}
+              style={{
+                top: "30%",
+                position: "relative",
+                left: "30%",
+                width: "max-content",
+              }}
             >
               <Typography variant="h5">
-                <Checkbox size="medium" style={{ zoom: "1.5" }} /> Enroll me for
-                mail notifications.
+                <Checkbox
+                  size="medium"
+                  style={{ zoom: "1.5" }}
+                  value={props.enroll}
+                  onChange={(event) => props.handleEnrollChange(event)}
+                />{" "}
+                Enroll me for mail notifications.
               </Typography>
             </Grid>
           </Paper>
         </Grid>
       </Grid>
       <div className={classes.button}>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab
+          variant="extended"
+          color="primary"
+          aria-label="add"
+          disabled={!props.enroll}
+        >
           <Typography variant="h5">Start</Typography>
         </Fab>
       </div>

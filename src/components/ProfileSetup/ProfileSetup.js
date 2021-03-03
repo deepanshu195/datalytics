@@ -78,6 +78,13 @@ function ProfileSetup(props) {
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
                       className={classes.selectEmpty}
+                      value={props.jobDetail.role}
+                      onChange={(event) =>
+                        props.handleJobDetailChange({
+                          type: "role",
+                          value: event.target.value,
+                        })
+                      }
                     >
                       <MenuItem value={"Developer"}>Developer</MenuItem>
                       <MenuItem value={"Analyst"}>Analyst</MenuItem>
@@ -92,6 +99,13 @@ function ProfileSetup(props) {
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
                       className={classes.selectEmpty}
+                      value={props.jobDetail.dept}
+                      onChange={(event) =>
+                        props.handleJobDetailChange({
+                          type: "dept",
+                          value: event.target.value,
+                        })
+                      }
                     >
                       <MenuItem value={"Technical"}>Technical</MenuItem>
                       <MenuItem value={"Business"}>Business</MenuItem>
@@ -115,7 +129,13 @@ function ProfileSetup(props) {
         </Grid>
       </Grid>
       <div className={classes.button}>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab
+          variant="extended"
+          color="primary"
+          aria-label="add"
+          onClick={props.nextStage}
+          disabled={!props.nextActive}
+        >
           Next <ArrowForwardIosIcon />
         </Fab>
       </div>
