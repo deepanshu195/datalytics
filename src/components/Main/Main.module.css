@@ -10,27 +10,146 @@
 .laptop_carousel_images {
   /* width: 100px;
   height: 100px; */
-  height: 16vw;
+  height: 20vw;
   object-fit: contain;
 }
 
 .laptop_carousel_images_div {
   position: absolute;
   top: 7vw;
-  left: 9vw;
+  left: 8.7vw;
   width: 31vw;
 }
 .LaptopCarousel {
   position: relative;
 }
 .main_heading {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  color: black;
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
 }
 .break {
 }
 .main_description {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 27px;
+  color: black;
 }
+
 .section_1 {
   display: flex;
   justify-content: space-between;
-  margin: 0px 5vw;
+  margin: 5vh 5vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.iit_mandi_logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+section -2
+*/
+.section_2_shape {
+  position: relative;
+  width: 100%;
+  /* height: 290px; */
+  background: #eff7fe;
+  top: 20vw;
+  z-index: 11;
+  /* padding-bottom: -30px; */
+}
+
+.section_2_shape:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-4deg);
+  z-index: -99;
+}
+
+/* section-3 */
+.group_photo_div {
+  position: absolute;
+  color: white;
+  top: 0px;
+  width: 80%;
+  padding: 6% 55px;
+}
+.group_photo_div_heading {
+  font-size: 50px !important;
+  line-height: 61px !important;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.group_photo_div_description {
+  font-weight: 500 !important;
+  font-size: 19.635px !important;
+  line-height: 24px !important;
+}
+.groupPhoto {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .laptop_carousel_images {
+    height: 20vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .laptop_carousel_images {
+    height: 20vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .laptop_image {
+    width: 60vw;
+  }
+  .laptop_carousel_images {
+    height: 26.5vw;
+  }
+  .laptop_carousel_images_div {
+    top: 10vw;
+    left: 11.7vw;
+    width: 41vw;
+  }
+  .section_2_shape {
+    /* display: none; */
+  }
+  .top_24 {
+    /* position: static; */
+  }
+  .top_23 {
+    /* position: static; */
+  }
+}
+@media only screen and (max-width: 770px) {
+}
+@media only screen and (max-width: 550px) {
+  .laptop_image {
+    width: 80vw;
+  }
+  .laptop_carousel_images_div {
+    top: 13vw;
+    left: 16vw;
+    width: 54vw;
+  }
+  .laptop_carousel_images {
+    height: 36vw;
+  }
 }

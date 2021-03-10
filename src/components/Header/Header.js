@@ -1,13 +1,104 @@
 import React from "react";
 
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { NavLink, Redirect, Router, Switch } from "react-router-dom";
+import classes from  "./Header.module.css";
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(0),       
+    },
+  },
+  paper: {
+    padding: theme.spacing(0),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+  button:{
+    background:"#25313C",
+    color:"white",
+    '&:hover': {
+      backgroundColor: "#25313C",
+      color: '#FFF'
+    },
+    // padding:"10px 26px",
+    fontSize:"22px",
+    lineHeight:"30px",
+    padding:"5px 10px",
+    fontWeight:"bold",
+    fontFamily:"Montserrat",
+    margin:"0px"
+  },
+  header:{
+    padding:"10px",
+    border: "0.5px solid #E5E5E5",
+    position:"relative",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)"
+  }
+}));
+
 const Header = (props) => {
+  const materialUiClasses = useStyles();
+  let windowWidth = window.innerWidth;
+  let justifyItems ="flex-end";
+  if(windowWidth<960){
+    justifyItems="center";
+  }
   return (
-    <React.Fragment>
-      <button onClick={props.handleOpen}> Signin </button>
-      <p>Icon</p>
-      <p>Navs</p>
-      <p>Modal</p>
-    </React.Fragment>
+    <div className={`${materialUiClasses.root} ${materialUiClasses.header}`}>
+      
+  <Grid container spacing={1}>
+  <Grid item xs={12}  sm={12} md={4}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+      <img src="images/logo.svg"></img>
+      </Paper>
+      </Grid>
+        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+          <NavLink to={"/"} className={`${classes.navlinks}`}>
+        Services
+          </NavLink>
+  
+          </Paper>
+        </Grid>
+        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+          <NavLink to={"/"} className={`${classes.navlinks}`}>
+        Tehnologies
+          </NavLink>
+          </Paper>
+        </Grid>
+        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+          <NavLink to={"/"} className={`${classes.navlinks}`}> 
+        Newsletter
+          </NavLink>
+          </Paper>
+        </Grid>
+        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+              <Button className={`${materialUiClasses.button} ${classes.decoration}`}  variant="contained" >
+              <NavLink
+                to={`/login`}
+                draggable={false}
+                className={`${materialUiClasses.button} ${classes.decoration}`}
+              >
+              Sign In
+            </NavLink>
+            </Button>
+          </Paper>
+        </Grid>
+      </Grid>
+
+      
+      
+  
+      
+    </div>
   );
 };
 

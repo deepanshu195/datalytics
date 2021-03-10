@@ -1,0 +1,10 @@
+.decoration {
+  text-decoration: none;
+}
+.navlinks {
+  text-decoration: none;
+  color: black;
+}
+.boxShadow {
+  box-shadow: none !important;
+}

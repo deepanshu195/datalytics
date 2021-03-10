@@ -13,7 +13,7 @@ const GoogleClient_ID =
 const GithubClient_ID = "f83a147b4078334aac1b";
 const Github_Client_Secret = "4b1630c24767e92b9f7be431c23c0d6b6f51854c";
 
-const SignIn = (props) => {
+const Signin = (props) => {
   return (
     <div className={classes.Signin_Content} id="simple-modal-description">
       <div className={classes.Google_btn}>
@@ -50,4 +50,4 @@ const SignIn = (props) => {
   );
 };
 
-export default SignIn;
+export default Signin;
