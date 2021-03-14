@@ -114,6 +114,8 @@ section -2
 .section_3 {
   margin-top: 10vh;
   min-height: 100vh;
+  margin-bottom: 20vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,7 +231,7 @@ section -2
   position: relative;
   width: 100%;
   z-index: 11;
-  padding: 20vh 0px;
+  padding: 10vh 0px;
 }
 
 .tilted:after {
