@@ -10,27 +10,389 @@
 .laptop_carousel_images {
   /* width: 100px;
   height: 100px; */
-  height: 16vw;
+  height: 20vw;
   object-fit: contain;
 }
 
 .laptop_carousel_images_div {
   position: absolute;
   top: 7vw;
-  left: 9vw;
+  left: 8.7vw;
   width: 31vw;
 }
 .LaptopCarousel {
   position: relative;
 }
 .main_heading {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  color: black;
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
 }
 .break {
 }
 .main_description {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 27px;
+  color: black;
 }
+
 .section_1 {
   display: flex;
   justify-content: space-between;
-  margin: 0px 5vw;
+  margin: 5vh 5vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.iit_mandi_logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+section -2
+*/
+.section_2_shape {
+  position: relative;
+  width: 100%;
+  /* height: 290px; */
+  background: #eff7fe;
+  /* top: 20vw; */
+  z-index: 11;
+  /* padding-bottom: -30px; */
+}
+
+.section_2_shape:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-6deg);
+  z-index: -99;
+}
+
+/* section-3 */
+.group_photo_div {
+  position: absolute;
+  color: white;
+  top: 0px;
+  width: 80%;
+  padding: 6% 55px;
+}
+.group_photo_div_heading {
+  font-size: 50px !important;
+  line-height: 61px !important;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.group_photo_div_description {
+  font-weight: 500 !important;
+  font-size: 19.635px !important;
+  line-height: 24px !important;
+}
+.groupPhoto {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.section_2 {
+  margin-top: 30vh;
+  /* display: none; */
+}
+
+.section_3 {
+  margin-top: 10vh;
+  min-height: 100vh;
+  margin-bottom: 20vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.companies_pics {
+  width: 70%;
+}
+.companies_pics_description {
+  font-size: 25px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 5vh !important;
+  /* Gray 3 */
+  width: 60%;
+
+  color: #828282;
+}
+.break {
+  display: inline;
+}
+.work_in_progress {
+  font-size: 59.983px;
+  line-height: 42px;
+}
+.work_in_progress_pics {
+}
+.work_in_progress_heading {
+  font-weight: bold !important;
+  font-size: 59.983px !important;
+  line-height: 84px !important;
+  /* or  */
+}
+.work_in_progress_sub_heading {
+  font-size: 25px !important;
+  line-height: 42px !important;
+  /* or  */
+}
+.section_5 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.connect_with_us_pic_desc {
+  font-weight: 500;
+  font-size: 31.4911px;
+  line-height: 38px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #4f4f4f;
+
+  text-shadow: 0px 1.49957px 1.49957px rgba(0, 0, 0, 0.12);
+}
+.connect_with_us {
+  width: 50%;
+  background: rgba(51, 51, 51, 0.94);
+  border: 2.36062px solid #5e5e5e;
+  box-shadow: -0.637368px 15.7375px 23.6062px rgba(0, 0, 0, 0.15);
+  border-radius: 18.885px;
+  color: #ffffff;
+  padding: 30px 100px;
+}
+.connect_with_us_div {
+  width: 80%;
+  margin: auto;
+}
+.connect_with_us_underline {
+  background: #ffffff;
+  border: 1.57375px solid #ffffff;
+  box-shadow: 0px 3.14749px 3.14749px rgba(0, 0, 0, 0.25);
+  margin: 15px 0px;
+}
+.connect_with_us_text {
+  font-weight: bold !important;
+  font-size: 42.4912px !important;
+  line-height: 52px !important;
+  /* identical to box height */
+  color: #ffffff !important;
+  text-shadow: 0px 3.14749px 3.14749px rgba(0, 0, 0, 0.25) !important;
+}
+.stay_in_touch {
+  font-weight: 500 !important;
+  font-size: 22.0325px !important;
+  line-height: 27px !important;
+  color: #ffffff !important;
+}
+.required_field::after {
+  content: "*";
+  color: red;
+  /* float: right; */
+}
+.connect_with_us_form {
+  margin-top: 25px !important;
+}
+.connect_with_us_form_input {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 10px !important;
+  outline: none;
+  /* width: 100%; */
+}
+
+/* cohort section */
+
+.tilted {
+  position: relative;
+  width: 100%;
+  z-index: 11;
+  padding: 10vh 0px;
+}
+
+.tilted:after {
+  position: absolute;
+  content: "";
+  height: inherit;
+  background: rgba(12, 124, 186, 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-3deg);
+  z-index: -99;
+  padding: 40vh auto !important;
+}
+.cohort_image {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.cohort_heading {
+  font-size: 59.983px !important;
+  line-height: 73px !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+.cohort_description {
+  font-weight: 600 !important;
+  font-size: 37.4894px !important;
+  line-height: 46px !important;
+  color: #ffffff !important;
+  mix-blend-mode: soft-light !important;
+}
+.cohort_card {
+  background: inherit !important;
+  box-shadow: unset !important;
+  margin-top: 30px;
+}
+.social_links {
+  margin-right: 15px !important;
+  display: inline-block !important;
+}
+.cohort_founder {
+  margin-top: 20px !important;
+  font-weight: bold !important;
+  font-size: 28.3361px !important;
+  line-height: 35px !important;
+  color: #ffffff !important;
+  text-shadow: 0px 2.12465px 2.12465px rgba(0, 0, 0, 0.25) !important;
+}
+.cohort_founder_portfolio {
+  font-size: 28.3361px !important;
+  line-height: 35px !important;
+  color: #ffffff !important;
+}
+.bookSessionButton {
+  color: white !important;
+  font-weight: bold !important;
+  text-transform: unset !important;
+  border: 2px solid white !important;
+  outline: unset !important;
+  border-radius: 4px !important;
+  margin-right: 100px !important;
+  margin-top: 15px !important;
+  font-size: 18px !important;
+}
+
+.bookSessionButton:hover {
+  background-color: white !important;
+  color: black !important;
+}
+@media only screen and (max-width: 1600px) {
+  .laptop_carousel_images {
+    height: 20vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .laptop_carousel_images {
+    height: 20vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .laptop_image {
+    width: 60vw;
+  }
+  .laptop_carousel_images {
+    height: 26.5vw;
+  }
+  .laptop_carousel_images_div {
+    top: 10vw;
+    left: 11.7vw;
+    width: 41vw;
+  }
+  @media screen and (max-width: 900px) {
+    .connect_with_us {
+      padding: 30px;
+      width: 70vw;
+    }
+  }
+
+  .top_24 {
+    /* position: static; */
+  }
+  .top_23 {
+    /* position: static; */
+  }
+  .companies_pics {
+    width: 100%;
+    object-fit: contain;
+  }
+  .break {
+    display: none;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .group_photo_div {
+    padding: 4% 25px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .groupPhoto {
+    height: 660px;
+  }
+  .bookSessionButton {
+    margin-right: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .laptop_image {
+    width: 80vw;
+  }
+  .laptop_carousel_images_div {
+    top: 13vw;
+    left: 16vw;
+    width: 54vw;
+  }
+  .laptop_carousel_images {
+    height: 36vw;
+  }
+  .groupPhoto {
+    height: 760px;
+  }
+  .connect_with_us {
+    padding: 20px;
+    width: 100vw;
+  }
+  .connect_with_us_div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .groupPhoto {
+    height: 860px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .groupPhoto {
+    height: 960px;
+  }
 }
