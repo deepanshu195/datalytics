@@ -40,7 +40,6 @@ const Header = () => {
   const materialUiClasses = useStyles();
   let windowWidth = window.innerWidth;
   let justifyItems ="flex-end";
-  console.log(windowWidth)
   if(windowWidth<960){
     justifyItems="center";
   }

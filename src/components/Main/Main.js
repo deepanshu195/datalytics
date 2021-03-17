@@ -87,7 +87,7 @@ let featureCardList = [
   }
 ]
 
-let images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg"]
+let images = ["https://res.cloudinary.com/datalytics/image/upload/v1615914375/Datalytics/screen_1_t7ka7a.jpg","https://res.cloudinary.com/datalytics/image/upload/v1615914375/Datalytics/screen_2_vjqi0r.jpg","https://res.cloudinary.com/datalytics/image/upload/v1615914541/Datalytics/screen_3_rqrexs.jpg"]
 
 const LaptopCarousel = ()=>{
   let showIndicators = true;
@@ -249,7 +249,6 @@ export const WorkInProgress  =()=>{
   )
 }
 const ConnectWithUs = ()=>{
-  const materialUiClasses = useStyles();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
@@ -263,7 +262,7 @@ const ConnectWithUs = ()=>{
     <Typography  align={"center"} className={classes.connect_with_us_text}>
       Connect With Us
     </Typography>
-    <Typography  align={"center"} >
+    <Typography  align={"center"} component={"div"}>
     
     <div className={classes.connect_with_us_underline}>
       </div>
@@ -415,7 +414,7 @@ const Main = () => {
     {/*  ----------------------------------------------------------------------- */}
 
     {/* section 4 */}
-    <Cohort />
+    {/* <Cohort /> */}
 
     {/*  ----------------------------------------------------------------------- */}
 
