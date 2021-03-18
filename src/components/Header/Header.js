@@ -49,7 +49,7 @@ const Header = () => {
   <Grid container spacing={1}>
   <Grid item xs={12}  sm={12} md={4}>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
-      <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"logo"}></img>
+      <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"logo"} style={{height:"89px"}}></img>
       </Paper>
       </Grid>
         <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>

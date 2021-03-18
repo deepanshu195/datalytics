@@ -42,15 +42,18 @@
 .section_1 {
   display: flex;
   justify-content: space-between;
-  margin: 5vh 5vw;
-  min-height: 80vh;
+  margin: 0vh 5vw;
+  min-height: 63vh;
   display: flex;
   align-items: center;
+  margin-top: 5vh;
 }
 
-.iit_mandi_logo {
+.iit_mandi_logo_div {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* 
@@ -112,9 +115,9 @@ section -2
 }
 
 .section_3 {
-  margin-top: 10vh;
-  min-height: 100vh;
-  margin-bottom: 20vh;
+  margin-top: 15vh;
+  /* min-height: 100vh; */
+  margin-bottom: 10vh;
 
   display: flex;
   justify-content: center;
