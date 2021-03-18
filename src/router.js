@@ -10,7 +10,7 @@ const Router = (props) => {
     <Switch>
       <Route path="/demo" component={Demo} />
       
-      <Route path="/login" component={Signin} />
+      {/* <Route path="/login" component={Signin} /> */}
 
       <Route path="/" exact component={Landing} />
       <Redirect to="/" />

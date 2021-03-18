@@ -285,10 +285,10 @@ const ConnectWithUs = ()=>{
         Full Name
       </span>
     </Typography>  
-     <TextField id="outlined-basic"   autoComplete={"on"} fullWidth={true} required types={"email"}
+     <TextField id="outlined-basic"   autoComplete={"on"} fullWidth={true} required 
      className={classes.connect_with_us_form_input} 
      onChange={(e)=>setName(e.target.value)}
-
+     placeholder={"Name"}
      InputLabelProps={{
       style: { margin:"5px", },
     }}
@@ -301,6 +301,9 @@ const ConnectWithUs = ()=>{
       </span>
       </Typography>  
       <TextField id="outlined-basic-2"  
+      types={"email"}
+      placeholder={"E-mail"}
+    
          onChange={(e)=>setEmail(e.target.value)} InputLabelProps={{
           style: { margin:"5px", },
         }}
@@ -324,6 +327,8 @@ const ConnectWithUs = ()=>{
           InputLabelProps={{
             style: { margin:"5px", },
           }}
+          placeholder={"Message"}
+    
       />
             <Typography align={"center"} style={{marginTop:"20px"}}>
               <Button variant="outlined" className={classes.bookSessionButton} style={{margin:"unset"}}>SUBSCRIBE</Button>
