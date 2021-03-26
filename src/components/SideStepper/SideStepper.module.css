@@ -1,0 +1,51 @@
+.Paper {
+  margin: 10;
+  width: fit-content;
+  height: fit-content;
+}
+
+.paper_Status {
+  margin: 10px;
+  text-align: center;
+  padding: 5px 0px;
+  height: 80px;
+}
+
+.Img {
+  width: 100%;
+  height: 90px;
+}
+.root {
+  height: 100vh;
+}
+
+.header {
+  height: 20vh;
+  padding: 10px;
+}
+
+.sideStepper {
+  display: block;
+  padding-left: 10px;
+}
+
+.topStepper {
+  display: none;
+}
+
+.Typo_Style {
+  text-align: center;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+  .sideStepper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .topStepper {
+    display: block;
+  }
+}

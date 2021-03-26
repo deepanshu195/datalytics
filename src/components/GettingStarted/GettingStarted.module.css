@@ -1,0 +1,50 @@
+.Paper {
+  margin: 10;
+}
+.Img {
+  width: 100%;
+  height: 80%;
+}
+.root {
+  height: 100vh;
+  width: 78vw;
+  padding: 30px;
+}
+.button {
+  position: fixed;
+  z-index: 100;
+  top: 85%;
+  right: 40px;
+  margin: 8px;
+}
+
+.header {
+}
+
+.title {
+  position: relative;
+  top: 10%;
+}
+
+.content {
+  position: relative;
+  top: 30%;
+  text-align: center;
+  word-wrap: normal;
+}
+
+@media only screen and (max-width: 960px) {
+  .root {
+    height: 100vh;
+    width: 92vw;
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .root {
+    height: 100vh;
+    width: 400px;
+    padding: 30px;
+  }
+}

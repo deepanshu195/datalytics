@@ -13,6 +13,9 @@ import {
   MenuItem,
   Button,
 } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+
+import classes from "./ProfileSetup.module.css";
 
 const useStyles = makeStyles((theme) => ({
   Paper: {
@@ -48,11 +51,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ProfileSetup(props) {
-  const classes = useStyles();
+  //const classes = useStyles();
 
   return (
     <React.Fragment>
-      <Grid container justify="center" spacing={5}>
+      <Grid container justify="center" spacing={2}>
         <Grid item xs={12}>
           <Paper className={classes.root}>
             <Typography variant="h3">Customize Your Workflow</Typography>
@@ -66,63 +69,81 @@ function ProfileSetup(props) {
             <Grid
               container
               spacing={2}
+              direction="row-reverse"
               style={{ position: "relative", top: "15%" }}
             >
-              <Grid item xs={4}>
-                <Paper style={{ padding: 15 }}>
-                  <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">
-                      Your Role
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      className={classes.selectEmpty}
-                      value={props.jobDetail.role}
-                      onChange={(event) =>
-                        props.handleJobDetailChange({
-                          type: "role",
-                          value: event.target.value,
-                        })
-                      }
-                    >
-                      <MenuItem value={"Developer"}>Developer</MenuItem>
-                      <MenuItem value={"Analyst"}>Analyst</MenuItem>
-                      <MenuItem value={"Manager"}>Manager</MenuItem>
-                    </Select>
-                  </FormControl>
-                  <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">
-                      Department
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      className={classes.selectEmpty}
-                      value={props.jobDetail.dept}
-                      onChange={(event) =>
-                        props.handleJobDetailChange({
-                          type: "dept",
-                          value: event.target.value,
-                        })
-                      }
-                    >
-                      <MenuItem value={"Technical"}>Technical</MenuItem>
-                      <MenuItem value={"Business"}>Business</MenuItem>
-                      <MenuItem value={"Customer"}>Customer</MenuItem>
-                    </Select>
-                  </FormControl>
-                  <FormControl className={classes.formControl}>
-                    <p style={{ marginBottom: 0 }}>Data Sources</p>
-                    <Button variant="outlined">Add Data Source</Button>
-                  </FormControl>
-                </Paper>
-              </Grid>
-              <Grid item xs={8}>
+              <Grid item sm={8} xs={12}>
                 <img
                   style={{ width: "100%", height: "80%" }}
                   src="https://res.cloudinary.com/dh7kluimp/image/upload/v1614373508/datalytics/aeznl6d1y8daueqnaiti.svg"
                 />
+              </Grid>
+              <Grid item sm={4} xs={12}>
+                <Paper elevation={3} className={classes.form}>
+                  <div>
+                    <FormControl
+                      variant="outlined"
+                      className={classes.formControl}
+                    >
+                      <InputLabel id="role">Your Role</InputLabel>
+                      <Select
+                        labelId="role"
+                        id="role"
+                        label="Your Role"
+                        value={props.jobDetail.role}
+                        onChange={(event) =>
+                          props.handleJobDetailChange({
+                            type: "role",
+                            value: event.target.value,
+                          })
+                        }
+                      >
+                        <MenuItem value="">
+                          <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={10}>Analyst</MenuItem>
+                        <MenuItem value={20}>Developer</MenuItem>
+                        <MenuItem value={30}>Manager</MenuItem>
+                      </Select>
+                    </FormControl>
+
+                    <p> </p>
+
+                    <FormControl
+                      variant="outlined"
+                      className={classes.formControl}
+                    >
+                      <InputLabel id="department">Department</InputLabel>
+                      <Select
+                        labelId="department"
+                        id="department"
+                        label="Department"
+                        value={props.jobDetail.dept}
+                        onChange={(event) =>
+                          props.handleJobDetailChange({
+                            type: "dept",
+                            value: event.target.value,
+                          })
+                        }
+                      >
+                        <MenuItem value="">
+                          <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={10}>Manager</MenuItem>
+                        <MenuItem value={20}>Technical</MenuItem>
+                        <MenuItem value={30}>Marketting</MenuItem>
+                      </Select>
+                    </FormControl>
+
+                    <p></p>
+
+                    <FormControl className={classes.formControl}>
+                      <Button variant="outlined">
+                        <SearchIcon /> Add Data Source
+                      </Button>
+                    </FormControl>
+                  </div>
+                </Paper>
               </Grid>
             </Grid>
           </Paper>

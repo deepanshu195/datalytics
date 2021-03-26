@@ -6,6 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Fab, Typography } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
+import classes from "./Welcome.module.css";
+
 const useStyles = makeStyles((theme) => ({
   Paper: {
     margin: 10,
@@ -30,26 +32,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Welcome(props) {
-  const classes = useStyles();
+  //const classes = useStyles();
 
   return (
     <React.Fragment>
       <Grid container justify="center" spacing={5}>
         <Grid item xs={12}>
-          <Paper className={classes.root}>
+          <Paper className={classes.welcome_Item}>
             <Typography variant="h2">Welcome Vidhan!</Typography>
             <Typography variant="h6">
               It's a pleasure working with you. We just have a few questions so
               that we can provide a customized workspace experience to you.
             </Typography>
-            <img
-              className={classes.Img}
-              src="https://res.cloudinary.com/dh7kluimp/image/upload/v1614373508/datalytics/o6gjptsa6e1pl9vhqsww.svg"
-            />
+            <div className={classes.welcome_Img_Div}>
+              <img
+                className={classes.welcome_Img}
+                src="https://res.cloudinary.com/dh7kluimp/image/upload/v1614373508/datalytics/o6gjptsa6e1pl9vhqsww.svg"
+              />
+            </div>
           </Paper>
         </Grid>
       </Grid>
-      <div className={classes.button}>
+      <div className={classes.next_Button}>
         <Fab
           variant="extended"
           color="primary"
