@@ -6,12 +6,11 @@ import {
   GithubLoginButton,
 } from "react-social-login-buttons";
 import classes from "./Signin.module.css";
+import config from "../../../config";
 
-const GoogleClient_ID =
-  "741279870944-n5ajq9vp9ego8nnrl8lpt4ovbhuc83va.apps.googleusercontent.com";
-
-const GithubClient_ID = "f83a147b4078334aac1b";
-const Github_Client_Secret = "4b1630c24767e92b9f7be431c23c0d6b6f51854c";
+const GoogleClient_ID = config.google_Cred.Client_ID;
+const GithubClient_ID = config.github_Cred.Client_ID;
+const Github_Client_Secret = config.github_Cred.Client_Secret;
 
 const Signin = (props) => {
   return (

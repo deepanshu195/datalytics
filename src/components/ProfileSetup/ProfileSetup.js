@@ -79,11 +79,20 @@ function ProfileSetup(props) {
                 />
               </Grid>
               <Grid item sm={4} xs={12}>
-                <Paper elevation={3} className={classes.form}>
+                <Paper
+                  elevation={3}
+                  className={classes.form}
+                  style={{
+                    backgroundColor: "#f1f1f1",
+                  }}
+                >
                   <div>
                     <FormControl
                       variant="outlined"
                       className={classes.formControl}
+                      style={{
+                        backgroundColor: "white",
+                      }}
                     >
                       <InputLabel id="role">Your Role</InputLabel>
                       <Select
@@ -112,6 +121,9 @@ function ProfileSetup(props) {
                     <FormControl
                       variant="outlined"
                       className={classes.formControl}
+                      style={{
+                        backgroundColor: "white",
+                      }}
                     >
                       <InputLabel id="department">Department</InputLabel>
                       <Select
@@ -137,7 +149,12 @@ function ProfileSetup(props) {
 
                     <p></p>
 
-                    <FormControl className={classes.formControl}>
+                    <FormControl
+                      className={classes.formControl}
+                      style={{
+                        backgroundColor: "white",
+                      }}
+                    >
                       <Button variant="outlined">
                         <SearchIcon /> Add Data Source
                       </Button>

@@ -31,12 +31,10 @@ function SideStepper(props) {
       <div className={classes.sideStepper}>
         <Grid container justify="center" direction="column" spacing={2}>
           <Grid item xs={12}>
-            <Paper className={classes.Paper}>
-              <img
-                src="https://res.cloudinary.com/dh7kluimp/image/upload/v1614373564/datalytics/gsit48yxcuuvlxwkvbng.svg"
-                className={classes.Img}
-              />
-            </Paper>
+            <img
+              src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/footer_logo_oknlpn.svg"
+              className={classes.Img}
+            />
           </Grid>
           <Typography style={{ textAlign: "center" }} variant="h6">
             Setting Up Your Workspace
@@ -45,17 +43,28 @@ function SideStepper(props) {
             {Object.keys(labelConstants).map((key, index) => {
               return (
                 <Grid key={key} item xs={12}>
-                  <Paper
+                  <div
                     style={{
                       backgroundColor:
-                        index < props.stage ? "lightblue" : "whitesmoke",
+                        index < props.stage
+                          ? "rgba(7, 198, 210, 0.1)"
+                          : "whitesmoke",
+                      borderRadius:
+                        index === 0
+                          ? "15px 15px 0px 0px"
+                          : index === 2
+                          ? "0px 0px 15px 15px"
+                          : "0px 0px 0px 0px",
+                      border: "2px solid #F1F1F1",
+                      borderStyle: "outset",
                     }}
+                    square={"true"}
                     className={classes.paper_Status}
                   >
                     <div style={{ position: "relative", top: "30%" }}>
                       {labelConstants[key]}
                     </div>
-                  </Paper>
+                  </div>
                 </Grid>
               );
             })}
@@ -68,12 +77,10 @@ function SideStepper(props) {
           <Grid item xs={12}>
             <Grid container style={{ height: "100px" }}>
               <Grid item xs={3}>
-                <Paper className={classes.Paper}>
-                  <img
-                    src="https://res.cloudinary.com/dh7kluimp/image/upload/v1614373564/datalytics/gsit48yxcuuvlxwkvbng.svg"
-                    className={classes.Img}
-                  />
-                </Paper>
+                <img
+                  src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/footer_logo_oknlpn.svg"
+                  className={classes.Img}
+                />
               </Grid>
               <Grid item xs={9}>
                 <Typography className={classes.Typo_Style} variant="h4">
