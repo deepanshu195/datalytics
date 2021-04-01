@@ -66,7 +66,7 @@ let featureCardList = [
   },
   {
     heading:["Analytical" ,"Services"],
-    description:"Having a set of data and don't know how to process it, Datalytics automated analytical process will helpinfiltrationandautomated modeling of data in a given industry.",
+    description:"Having a set of data and don't know how to process it, Datalytics automated analytical process will help infiltration and automated modeling of data in a given industry.",
     image:"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/analytics_bjjclk.svg",
     top:"-24vh",
     medium:"-24vh"
@@ -87,19 +87,23 @@ let featureCardList = [
   }
 ]
 
-let images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Yellow-maple.jpg/800px-Yellow-maple.jpg"]
+let images = ["https://res.cloudinary.com/datalytics/image/upload/v1615914375/Datalytics/screen_1_t7ka7a.jpg","https://res.cloudinary.com/datalytics/image/upload/v1615914375/Datalytics/screen_2_vjqi0r.jpg","https://res.cloudinary.com/datalytics/image/upload/v1615914541/Datalytics/screen_3_rqrexs.jpg"]
 
 const LaptopCarousel = ()=>{
   let showIndicators = true;
+  let style = {marginTop:"0px"};
+  if(window.innerWidth < 960){
+    style.marginTop = "10vh"
+  }
   if(window.innerWidth<660){
       showIndicators=false;
   }
-    return(<div style={{position:"relative"}}>
+    return(<div style={{position:"relative",...style}}>
       <div>
       <img className={classes.laptop_image} src="https://res.cloudinary.com/datalytics/image/upload/v1615460224/Datalytics/laptop_image_ulcke5.png"  alt={"laptop"}/>
       </div>
       <div className={classes.laptop_carousel_images_div}>      
-            <Carousel showThumbs={false} showArrows={true} autoPlay={true}  swipeable={true} showIndicators={showIndicators} infiniteLoop={true}> 
+            <Carousel showThumbs={false} showArrows={true} autoPlay={true}  swipeable={true} showIndicators={showIndicators} infiniteLoop={true}  showStatus={false} stopOnHover={true}> 
           {
               images.map((url, index) => (
                   <div key={index}>
@@ -113,18 +117,21 @@ const LaptopCarousel = ()=>{
 }
 
 const LaptopDescription = ()=>{
+
   return(
   <div>
     <h1 className={classes.main_heading}>
       Where Data Drives Everything
     </h1>
     <p className={classes.main_description}>
-      Datalytics is an AI automation and BI integration tool <span className={classes.break}><br/> </span>startup. It aims to provide quality automation of various <span className={classes.break}><br/> </span> day to day analytics task such as visualization, chatbot <span className={classes.break}><br/> </span>assistance, report generation and analytics by making <span className={classes.break}><br/> </span> the process of data analysis more coherent and<span className={classes.break}><br/> </span> collaborative. Completing the repetitive task that can be <span className={classes.break}><br/> </span> automated and diverting time and effort towards more <span className={classes.break}><br/> </span>complex problems.
+      Datalytics is an AI automation and BI integration tool <span className={classes.break}><br/> </span>startup. It aims to provide quality automation of various <span className={classes.break}><br/> </span> day to day analytics task such as visualization, chatbot <span className={classes.break}><br/> </span>assistance, report generation and analytics by making <span className={classes.break}><br/> </span> the process of data analysis more coherent and<span className={classes.break}><br/> </span> collaborative. Completing the repetitive task that can be <span className={classes.break}><br/> </span> automated and diverting time and effort towards more <span className={classes.break}><br/> </span>complex problems. <br/> <br/> <h2> Incubated & Backed by</h2>
     </p>
-    <div>
-      <img src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/iit_mandi_logo_vgdde5.svg" alt={"IIT Mandi Logo"} className={classes.iit_mandi_logo}></img>
+    <div className={classes.iit_mandi_logo_div}>
+      <img src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/iit_mandi_logo_vgdde5.svg" alt={"IIT Mandi Logo"}  style={{width:"200px"}}></img>
+      <img src="https://res.cloudinary.com/datalytics/image/upload/v1616042075/Datalytics/PadUp_fqlzid.png" alt={"Pad up logo"} style={{height:"50px",width:"150px"}} />
     </div>
-  </div>)
+  </div>
+  )
 }
 const FeatureCards = ()=>{
   const classes = useStyles()
@@ -249,7 +256,6 @@ export const WorkInProgress  =()=>{
   )
 }
 const ConnectWithUs = ()=>{
-  const materialUiClasses = useStyles();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
@@ -263,7 +269,7 @@ const ConnectWithUs = ()=>{
     <Typography  align={"center"} className={classes.connect_with_us_text}>
       Connect With Us
     </Typography>
-    <Typography  align={"center"} >
+    <Typography  align={"center"} component={"div"}>
     
     <div className={classes.connect_with_us_underline}>
       </div>
@@ -279,9 +285,13 @@ const ConnectWithUs = ()=>{
         Full Name
       </span>
     </Typography>  
-     <TextField id="outlined-basic" label="Name"  autoComplete={"on"} fullWidth={true} required types={"email"}
+     <TextField id="outlined-basic"   autoComplete={"on"} fullWidth={true} required 
      className={classes.connect_with_us_form_input} 
      onChange={(e)=>setName(e.target.value)}
+     placeholder={"Name"}
+     InputLabelProps={{
+      style: { margin:"5px", },
+    }}
      />
 
   {/* email */}
@@ -290,8 +300,13 @@ const ConnectWithUs = ()=>{
           Email
       </span>
       </Typography>  
-      <TextField id="outlined-basic-2" label="Email" 
-         onChange={(e)=>setEmail(e.target.value)}
+      <TextField id="outlined-basic-2"  
+      types={"email"}
+      placeholder={"E-mail"}
+    
+         onChange={(e)=>setEmail(e.target.value)} InputLabelProps={{
+          style: { margin:"5px", },
+        }}
       className={classes.connect_with_us_form_input} autoComplete={"on"} fullWidth={true} required/>
 
 {/* message */}
@@ -302,13 +317,18 @@ const ConnectWithUs = ()=>{
      </Typography>  
      <TextField
           id="outlined-multiline-static"
-          label="Message"
+          
           multiline
           rows={4}
           className={classes.connect_with_us_form_input}
           autoComplete={"on"} 
           onChange={(e)=>setMessage(e.target.value)}
           fullWidth={true}
+          InputLabelProps={{
+            style: { margin:"5px", },
+          }}
+          placeholder={"Message"}
+    
       />
             <Typography align={"center"} style={{marginTop:"20px"}}>
               <Button variant="outlined" className={classes.bookSessionButton} style={{margin:"unset"}}>SUBSCRIBE</Button>
@@ -415,12 +435,12 @@ const Main = () => {
     {/*  ----------------------------------------------------------------------- */}
 
     {/* section 4 */}
-    <Cohort />
+    {/* <Cohort /> */}
 
     {/*  ----------------------------------------------------------------------- */}
 
     {/*  section 5 */}
-   <section className={classes.section_3} style={{padding:"10px"}}>
+   <section className={classes.section_3} style={{padding:"10px",minHeight:"0px"}}>
      <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615470968/Datalytics/data_source_huklyt.svg"} alt={"data source extension"} className={classes.companies_pics} />
    </section>
       {/*  ----------------------------------------------------------------------- */}

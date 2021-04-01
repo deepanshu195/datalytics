@@ -39,7 +39,6 @@ const Header = () => {
   const materialUiClasses = useStyles();
   let windowWidth = window.innerWidth;
   let justifyItems = "flex-end";
-  console.log(windowWidth);
   if (windowWidth < 960) {
     justifyItems = "center";
   }
@@ -53,6 +52,7 @@ const Header = () => {
                 "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"
               }
               alt={"logo"}
+              style={{ height: "89px" }}
             ></img>
           </Paper>
         </Grid>
