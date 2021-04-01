@@ -90,10 +90,10 @@ const Stepper = (props) => {
   return (
     <React.Fragment>
       <Grid container spacing={2} className={classes.root}>
-        <Grid item xs={2}>
+        <Grid item md={2} sm={12}>
           <SideStepper stage={stage} />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item md={10} sm={12}>
           {mainContent}
         </Grid>
       </Grid>

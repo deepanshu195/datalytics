@@ -1,0 +1,32 @@
+.Paper {
+  margin: 10;
+}
+.Img {
+  width: 100%;
+  height: 80%;
+}
+.root {
+  height: fit-content;
+  padding: 30px;
+}
+.button {
+  position: fixed;
+  z-index: 100;
+  bottom: 2%;
+  left: 50%;
+}
+.form {
+  padding: 20px;
+  position: relative;
+  top: 10%;
+  background: #f1f1f1;
+}
+.formControl {
+  width: 20vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .formControl {
+    width: 50vw;
+  }
+}

@@ -1,0 +1,35 @@
+.welcome_Item {
+  height: fit-content;
+  padding: 10px;
+}
+.next_Button {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  right: 20px;
+}
+.welcome_Img {
+  height: 100%;
+  width: 100%;
+}
+
+.welcome_Img_Div {
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .welcome_Item {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .welcome_Img {
+    width: 700px;
+  }
+  .welcome_Item {
+    height: 100vh;
+  }
+}
