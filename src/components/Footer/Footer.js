@@ -7,55 +7,31 @@ import { NavLink } from "react-router-dom";
 
 let footerNavLinks = [
   {
-    name:"Get the app",
+    name:"About us",
     link:"/"
   },
   {
-    name:"Know us more",
+    name:"Documentation",
     link:"/"
   },{
-    name:"Blog",
+    name:"Services",
     link:"/"
   },{
-    name:"Terms",
+    name:"Technologies",
     link:"/"
   },{
-    name:"Support",
-    link:"/"
-  },{
-    name:"Cohorts",
-    link:"/"
-  },{
-    name:"Training",
-    link:"/"
-  },{
-    name:"Privacy",
-    link:"/"
-  },{
-    name:"Affiliates",
+    name:"Blogs",
     link:"/"
   },{
     name:"Careers",
     link:"/"
   },{
-    name:"Featured Courses",
-    link:"/"
-  },{
-    name:"Patents",
+    name:"Contact Us",
     link:"/"
   },{
     name:"Sitemap",
     link:"/"
-  },{
-    name:"Incubation",
-    link:"/"
-  },{
-    name:"Backend",
-    link:"/"
-  },{
-    name:"Catalyst",
-    link:"/"
-  },
+  }
 ]
 
 const Footer = () => {
@@ -83,11 +59,11 @@ const Footer = () => {
       </div>  
       <div className={classes.footer_logo_box}> 
       <Grid  container spacing={5}  >
-        <Grid item xs={12}  sm={6} md={6} container  spacing={0}    justify={ justify || "flex-start"}>
-        <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/footer_logo_oknlpn.svg"} alt={"datalytics logo"} />
+        <Grid item xs={12}  sm={5} md={5} container  spacing={0}    justify={ justify || "flex-start"}>
+        {/* <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"datalytics logo"}  style={{height:"100px"}}/> */}
         </Grid>
-        <Grid item xs={12}  sm={6} md={6} container  spacing={0}    justify={ justify || "flex-end"} alignContent={"center"}>
-        2020 Datalytics Pvt. Ltd.
+        <Grid item xs={12}  sm={6} md={6} container  spacing={0}    justify={ justify || "flex-start"} alignContent={"center"}>
+        &copy; 2020  Datalytics Technologies Pvt. Ltd.
         </Grid>
       </Grid>
       </div>
