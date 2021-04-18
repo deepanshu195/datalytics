@@ -127,8 +127,9 @@ const LaptopDescription = ()=>{
       Datalytics is an AI automation and BI integration tool <span className={classes.break}><br/> </span>startup. It aims to provide quality automation of various <span className={classes.break}><br/> </span> day to day analytics task such as visualization, chatbot <span className={classes.break}><br/> </span>assistance, report generation and analytics by making <span className={classes.break}><br/> </span> the process of data analysis more coherent and<span className={classes.break}><br/> </span> collaborative. Completing the repetitive task that can be <span className={classes.break}><br/> </span> automated and diverting time and effort towards more <span className={classes.break}><br/> </span>complex problems. <br/> <br/> <h2> Incubated & Backed by</h2>
     </p>
     <div className={classes.iit_mandi_logo_div}>
-      <img src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/iit_mandi_logo_vgdde5.svg" alt={"IIT Mandi Logo"}  style={{width:"200px"}}></img>
-      <img src="https://res.cloudinary.com/datalytics/image/upload/v1616042075/Datalytics/PadUp_fqlzid.png" alt={"Pad up logo"} style={{height:"50px",width:"150px"}} />
+      <img src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/iit_mandi_logo_vgdde5.svg" alt={"IIT Mandi Logo"}  style={{width:"200px",marginRight:"40px"}}></img>
+      <img src="https://res.cloudinary.com/datalytics/image/upload/v1616042075/Datalytics/PadUp_fqlzid.png" alt={"Pad up logo"} style={{height:"50px",width:"150px",objectFit:
+    "contain"}} />
     </div>
   </div>
   )
@@ -142,9 +143,9 @@ const FeatureCards = ()=>{
   }
   return(
     featureCardList.map((val,index)=>
-      <Grid item xs={12}  sm={6} md={3} container  spacing={0} style={{position:position,top:(width > 960 ?  val.top : val.medium )}} key={"feature_cards_landing_page"+index}> 
-    <Card className={classes.featureCard} >
-    <CardContent >
+      <Grid item xs={12}  sm={6} md={3} container  spacing={0} style={{position:position,top:(width > 960 ?  val.top : val.medium ) }} key={"feature_cards_landing_page"+index}> 
+    <Card className={classes.featureCard} style={{background:"#eff8fc"}} >
+    <CardContent  >
       <Typography align={"center"}>
         <img src={val.image} className={classes.featureCardsImage}   alt={"feature cards"}/>
       </Typography>
@@ -418,7 +419,7 @@ const Main = () => {
         <Grid container spacing={5} className={classes.section_2_grid}>       
           <FeatureCards />
         </Grid>
-          <GroupPhoto />
+          {/* <GroupPhoto /> */}
         </div>
         </div>
 
@@ -427,6 +428,9 @@ const Main = () => {
     {/* ------------------------------------------------------------------------------ */}
       {/* section -3 */}
       <section className={classes.section_3}>
+      <Typography align={"center"} className={classes.companies_pics_title} component={"div"}>
+      Seamless Integration across Platforms
+     </Typography>
         <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615457959/Datalytics/Integration_Graphic_1_n6zyzw.svg"} className={classes.companies_pics} alt={"companies"} />
         <Typography align={"center"} className={classes.companies_pics_description} component={"div"}>
           We understand that it's difficult to adjust in a new development environment. This is why we've built our services around the tools you already have exposure to

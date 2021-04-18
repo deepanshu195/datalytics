@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    // minWidth:"150px"
   },
   button:{
     background:"#25313C",
@@ -25,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#25313C",
       color: '#FFF'
     },
-    // padding:"10px 26px",
     fontSize:"22px",
     lineHeight:"30px",
     padding:"5px 10px",
@@ -47,34 +47,51 @@ const Header = () => {
     <div className={`${materialUiClasses.root} ${classes.header}`}>
       
   <Grid container spacing={1}>
-  <Grid item xs={12}  sm={12} md={4}>
+      <Grid item xs={12}  sm={12}   lg={2} >
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
-      <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"logo"} style={{height:"89px"}}></img>
+        <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"logo"} style={{height:"89px"}}></img>
       </Paper>
       </Grid>
-        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+      <Grid container  item xs={6} sm={4} md={2}     lg={2} justify={justifyItems} alignItems={"center"}>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
           <NavLink to={"/"} className={`${classes.navlinks}`}>
-        Services
+        Demo
           </NavLink>
   
           </Paper>
         </Grid>
-        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+        <Grid container  item xs={6} sm={4} md={2}    lg={2} justify={justifyItems} alignItems={"center"}>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
           <NavLink to={"/"} className={`${classes.navlinks}`}>
-        Tehnologies
+        Solutions
+          </NavLink>
+  
+          </Paper>
+        </Grid>
+        <Grid container  item xs={6} sm={4} md={2}    lg={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+          <NavLink to={"/"} className={`${classes.navlinks}`}>
+        Pricing
+          </NavLink>
+  
+          </Paper>
+        </Grid>
+        <Grid container  item xs={6} sm={4} md={2}    lg={2} justify={justifyItems} alignItems={"center"}>
+          <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
+          <NavLink to={"/"} className={`${classes.navlinks}`}>
+        Services
           </NavLink>
           </Paper>
         </Grid>
-        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+        {/* <Grid container  item xs={6} sm={2}    lg={2} justify={justifyItems} alignItems={"center"}>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
           <NavLink to={"/"} className={`${classes.navlinks}`}> 
-        Newsletter
+        Blog
           </NavLink>
           </Paper>
-        </Grid>
-        <Grid container  item xs={6} sm={3}   md={2} justify={justifyItems} alignItems={"center"}>
+        </Grid> */}
+
+        <Grid container  item xs={6} sm={4}    lg={2} justify={justifyItems} alignItems={"center"}>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
               <Button className={`${materialUiClasses.button} ${classes.decoration}`}  variant="contained" >
               <NavLink

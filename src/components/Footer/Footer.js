@@ -59,7 +59,7 @@ const Footer = () => {
       </div>  
       <div className={classes.footer_logo_box}> 
       <Grid  container spacing={5}  >
-        <Grid item xs={12}  sm={5} md={5} container  spacing={0}    justify={ justify || "flex-start"}>
+        <Grid item xs={12}  sm={4} md={4} container  spacing={0}    justify={ justify || "flex-start"}>
         {/* <img src={"https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/logo_tljs0z.svg"} alt={"datalytics logo"}  style={{height:"100px"}}/> */}
         </Grid>
         <Grid item xs={12}  sm={6} md={6} container  spacing={0}    justify={ justify || "flex-start"} alignContent={"center"}>
