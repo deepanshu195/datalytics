@@ -10,10 +10,20 @@
 }
 .header {
   font-size: 32px;
-  padding: 40px 30px;
+  padding: 5px 30px;
   border: 0.5px solid #e5e5e5;
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -1px;
+}
+.header_logo {
+  height: 108px;
+  width: 144px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 @media only screen and (max-width: 1000px) {
   .header {
