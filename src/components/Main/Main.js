@@ -25,30 +25,7 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
-  featureCardsImage: {
-    width: "60px",
-    textAlign: "center",
-  },
-  featureCardHeading: {
-    fontSize: "19px",
-    lineHeight: "23px",
-    fontWeight: "600",
-    textShadow: "0px 4px 15px rgba(0, 0, 0, 0.12)",
-    textAlign: "center",
-  },
-  featureCardDescription: {
-    fontSize: "15px",
-    fontWeight: "normal",
-    textAlign: "center",
-    lineHeight: "18px",
-    // line-height: 24px;
-  },
-  featureCard: {
-    background: "#FFFFFF",
-    boxShadow: "6px 13px 13px grey",
-    borderRadius: "10px",
-    padding: "10px",
-  },
+
   groupPhotoParent: {
     width: "100%",
     position: "relative",
@@ -64,8 +41,6 @@ let featureCardList = [
     className: "margin-top",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459423/Datalytics/presentation_ykgyft.svg",
-    top: "-18vh",
-    medium: "-18vh",
   },
   {
     heading: ["Analytical", "Services"],
@@ -73,8 +48,6 @@ let featureCardList = [
       "Having a set of data and don't know how to process it, Datalytics automated analytical process will help infiltration and automated modeling of data in a given industry.",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/analytics_bjjclk.svg",
-    top: "-24vh",
-    medium: "-24vh",
   },
   {
     heading: ["Chatbot", "Assistance"],
@@ -82,8 +55,6 @@ let featureCardList = [
       "Customized to answer all your questions, it will help you in understanding processes that can be applied as well as provide the right guidance and inference .",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/chatbot_qrvtad.svg",
-    top: "-20vh",
-    medium: "-18vh",
   },
   {
     heading: ["Report", "Generation"],
@@ -91,8 +62,64 @@ let featureCardList = [
       "Need a customized and automated report, the report generator provides automated project reports including all the elements generated and customized through drag and drop.",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459423/Datalytics/reports_wqkmlh.svg",
-    top: "-28vh",
-    medium: "-24vh",
+  },
+];
+
+let companiesCardList = [
+  {
+    name: "R Programming",
+    description: "Data Analytics",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377082/Datalytics/image_19_ozynpx.svg",
+    className: "",
+  },
+  {
+    name: "Python",
+    description: "Software Development",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377081/Datalytics/image_18_l9jmft.svg",
+    className: "",
+  },
+  {
+    name: "Keras",
+    description: "Artificial Neural Networks",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377082/Datalytics/image_23_qusuyo.svg",
+    className: "",
+  },
+  {
+    name: "Microsoft ML",
+    description: "Cloud Computing",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377081/Datalytics/image_24_pktpuq.svg",
+    className: "",
+  },
+
+  {
+    name: "Microsoft Excel",
+    description: "Spreadsheet App",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377487/Datalytics/image_18_2_sefwwd.svg",
+    className: "",
+  },
+  {
+    name: "Slack",
+    description: "Business Communication",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377082/Datalytics/image_20_twcn6w.svg",
+    className: "",
+  },
+  {
+    name: "Docker",
+    className: "Data Analytics",
+    description: "Virtualization",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377082/Datalytics/image_25_o3kjok.svg",
+  },
+  {
+    name: "Microsoft Powerpoint",
+    description: "Presentation Program",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377084/Datalytics/image_26_euy4wm.svg",
+    className: "",
+  },
+  {
+    name: "Observable",
+    description: "Thinking with Data",
+    img: "https://res.cloudinary.com/datalytics/image/upload/v1622377084/Datalytics/image_27_1_gv4jiy.svg",
+    className: "",
   },
 ];
 
@@ -149,37 +176,30 @@ const LaptopCarousel = () => {
 const LaptopDescription = () => {
   return (
     <div>
-      <h1 className={classes.main_heading}>Where Data Drives Everything</h1>
+      <h1 className={classes.main_heading}>Where Data Drives Everything!</h1>
       <p className={classes.main_description}>
-        Datalytics is an AI automation and BI integration tool{" "}
+        Datalytics is an AI automation and BI integration tool startup. It aims
+        to provide{" "}
         <span className={classes.break}>
-          <br />{" "}
+          <br />
+        </span>{" "}
+        quality automation of various day to day analytics task such as
+        visualization, chatbot
+        <span className={classes.break}>
+          <br />
         </span>
-        startup. It aims to provide quality automation of various{" "}
+        assistance, report generation and analytics by making the process of
+        data analysis{" "}
         <span className={classes.break}>
-          <br />{" "}
-        </span>{" "}
-        day to day analytics task such as visualization, chatbot{" "}
-        <span className={classes.break}>
-          <br />{" "}
+          <br />
         </span>
-        assistance, report generation and analytics by making{" "}
+        more coherent and collaborative. Completing the repetitive task that can
+        be
         <span className={classes.break}>
-          <br />{" "}
-        </span>{" "}
-        the process of data analysis more coherent and
-        <span className={classes.break}>
-          <br />{" "}
-        </span>{" "}
-        collaborative. Completing the repetitive task that can be{" "}
-        <span className={classes.break}>
-          <br />{" "}
-        </span>{" "}
-        automated and diverting time and effort towards more{" "}
-        <span className={classes.break}>
-          <br />{" "}
+          <br />
         </span>
-        complex problems. <br /> <br /> <h2> Incubated & Backed by</h2>
+        automated and diverting time and effort towards more complex problems.{" "}
+        <br /> <br /> <h2> Incubated & Backed by</h2>
       </p>
       <div className={classes.iit_mandi_logo_div}>
         <img
@@ -196,47 +216,128 @@ const LaptopDescription = () => {
     </div>
   );
 };
+
+const SingleFeatureCard = ({ val }) => {
+  const marterialClasses = useStyles();
+
+  return (
+    <Card
+      style={{
+        background: "unset",
+        color: "white",
+        boxShadow: "unset",
+        border: "1px solid white",
+        borderBottomLeftRadius: "35px",
+        borderTopRightRadius: "35px",
+        padding: "25px",
+        cursor: "pointer",
+      }}
+      className={`${classes.feature_card_hover}`}
+    >
+      <CardContent>
+        <Typography align={"center"}>
+          <img
+            src={val.image}
+            style={{ width: "60px", textAlign: "center" }}
+            alt={"feature cards"}
+          />
+        </Typography>
+        <Typography
+          className={marterialClasses.featureCardHeading}
+          style={{
+            fontSize: "19px",
+            lineHeight: "23px",
+            fontWeight: "600",
+            textShadow: "0px 4px 15px rgba(0, 0, 0, 0.12)",
+            textAlign: "center",
+          }}
+        >
+          {val.heading[0]}
+          <br />
+          {val.heading[1] || ""}
+        </Typography>
+      </CardContent>
+      <Typography
+        className={marterialClasses.featureCardDescription}
+        style={{
+          fontSize: "15px",
+          fontWeight: "normal",
+          textAlign: "center",
+          lineHeight: "18px",
+        }}
+      >
+        {val.description}
+      </Typography>
+    </Card>
+  );
+};
+
 const FeatureCards = () => {
-  const classes = useStyles();
+  const marterialClasses = useStyles();
   let position = "relative";
+  let useCarousel;
   let width = window.innerWidth;
+  if (window.innerWidth < 960) {
+    useCarousel = [
+      [featureCardList[0], featureCardList[1]],
+      [featureCardList[0], featureCardList[1]],
+    ];
+  }
   if (window.innerWidth < 600) {
     position = "static";
+    useCarousel = featureCardList;
   }
+
+  if (useCarousel) {
+    return (
+      <Carousel
+        showThumbs={false}
+        showArrows={true}
+        autoPlay={false}
+        swipeable={true}
+        showIndicators={false}
+        infiniteLoop={true}
+        showStatus={true}
+        stopOnHover={true}
+        className={`${classes.featureCardListCarousel}`}
+      >
+        {useCarousel.map((val, index) =>
+          Array.isArray(val) ? (
+            <Grid container justify={"space-around"}>
+              {val.map((arrayValue) => (
+                <Grid xs={12} sm={5} md={2} container justify={"center"}>
+                  <SingleFeatureCard val={arrayValue}></SingleFeatureCard>
+                </Grid>
+              ))}
+            </Grid>
+          ) : (
+            <Grid container justify={"center"}>
+              <Grid xs={8} sm={5} md={2} container justify={"center"}>
+                <SingleFeatureCard val={val}></SingleFeatureCard>
+              </Grid>
+            </Grid>
+          )
+        )}
+      </Carousel>
+    );
+  }
+
   return featureCardList.map((val, index) => (
     <Grid
-      item
       xs={12}
       sm={6}
-      md={3}
+      md={2}
       container
       spacing={0}
+      justify={"space-between"}
       style={{ position: position, top: width > 960 ? val.top : val.medium }}
       key={"feature_cards_landing_page" + index}
     >
-      <Card className={classes.featureCard} style={{ background: "#eff8fc" }}>
-        <CardContent>
-          <Typography align={"center"}>
-            <img
-              src={val.image}
-              className={classes.featureCardsImage}
-              alt={"feature cards"}
-            />
-          </Typography>
-          <Typography className={classes.featureCardHeading}>
-            {val.heading[0]}
-            <br />
-            {val.heading[1] || ""}
-          </Typography>
-        </CardContent>
-        <Typography className={classes.featureCardDescription}>
-          {val.description}
-        </Typography>
-      </Card>
+      <SingleFeatureCard val={val}></SingleFeatureCard>
     </Grid>
   ));
 };
-const subscribe = () => {};
+
 export const GroupPhoto = () => {
   const materialUiClasses = useStyles();
 
@@ -288,6 +389,127 @@ export const GroupPhoto = () => {
     </Typography>
   );
 };
+
+const SingleCompanyCard = ({ data, style }) => {
+  return (
+    <Card style={style}>
+      <CardContent style={{ display: "flex" }}>
+        <Typography style={{ marginRight: "30px", display: "flex" }}>
+          <img src={data.img} style={{ width: "100px", height: "100px" }} />
+        </Typography>
+        <Typography
+          style={{
+            alignSelf: "center",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Typography
+            style={{
+              fontSize: "20px",
+              lineHeight: "23px",
+              letterSpacing: "0.05em",
+              textAlign: "initial",
+            }}
+          >
+            {data.name}
+          </Typography>
+          <Typography
+            style={{
+              fontSize: "14px",
+              lineHeight: "16px",
+              marginTop: "16px",
+              textAlign: "initial",
+            }}
+          >
+            {data.description}
+          </Typography>
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+};
+
+const MakeCompaniesColumn = ({ columnData, xs, md, sm, style }) => {
+  return (
+    <Grid md={md} sm={sm} xs={xs} style={style}>
+      {columnData.map((data) => (
+        <SingleCompanyCard
+          data={data}
+          style={{ outline: "none", boxShadow: "none" }}
+        />
+      ))}
+    </Grid>
+  );
+};
+
+export const CompaniesCard = () => {
+  let viewObject = [
+    [companiesCardList[0], companiesCardList[1], companiesCardList[2]],
+    [companiesCardList[3], companiesCardList[4], companiesCardList[5]],
+    [companiesCardList[6], companiesCardList[7], companiesCardList[8]],
+  ];
+
+  let useCarousel;
+  let width = window.innerWidth;
+  if (window.innerWidth < 960) {
+    useCarousel = true;
+  }
+
+  if (useCarousel) {
+    return (
+      <Carousel
+        showThumbs={false}
+        showArrows={true}
+        autoPlay={false}
+        swipeable={true}
+        showIndicators={false}
+        infiniteLoop={true}
+        showStatus={true}
+        stopOnHover={true}
+        className={`${classes.featureCardListCarousel}`}
+      >
+        {viewObject.map((val) => (
+          <MakeCompaniesColumn
+            sm={6}
+            xs={10}
+            columnData={val}
+            style={{ margin: "auto" }}
+          />
+        ))}
+      </Carousel>
+    );
+  }
+
+  return (
+    <Grid
+      container
+      justify={"center"}
+      style={{ marginLeft: "12%", marginRight: "8%", width: "80%" }}
+    >
+      {viewObject.map((val) => (
+        <MakeCompaniesColumn columnData={val} xs={12} sm={6} md={4} />
+      ))}
+    </Grid>
+  );
+};
+
+const FourDImage = () => {
+  let src =
+    "https://res.cloudinary.com/datalytics/image/upload/v1622383970/Datalytics/4d_sec_desktop_vir47e.svg";
+  let width = "100%";
+  if (window.innerWidth < 600) {
+    src =
+      "https://res.cloudinary.com/datalytics/image/upload/v1622383970/Datalytics/4d_sec_mobile_bnc8le.svg";
+    width = "-webkit-fill-available";
+  }
+  return (
+    <Typography style={{ marginTop: "10vh", marginBottom: "10vh" }}>
+      <img src={src} style={{ width: width }}></img>
+    </Typography>
+  );
+};
+
 export const WorkInProgress = () => {
   let justify = "";
   if (window.innerWidth < 960) {
@@ -418,9 +640,7 @@ const ConnectWithUs = () => {
           <Typography align={"center"} className={classes.connect_with_us_text}>
             Connect With Us
           </Typography>
-          <Typography align={"center"} component={"div"}>
-            <div className={classes.connect_with_us_underline}></div>
-          </Typography>
+
           <Typography
             align={"center"}
             className={classes.stay_in_touch}
@@ -432,49 +652,57 @@ const ConnectWithUs = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              subscribe({ name, email, message });
+              // subscribe({ name, email, message });
             }}
           >
-            {/* full name */}
-            <Typography
-              className={` ${classes.connect_with_us_form}`}
-              component={"div"}
-            >
-              <span className={`${classes.required_field}`}>Full Name</span>
-            </Typography>
-            <TextField
-              id="outlined-basic"
-              autoComplete={"on"}
-              fullWidth={true}
-              required
-              className={classes.connect_with_us_form_input}
-              onChange={(e) => setName(e.target.value)}
-              placeholder={"Name"}
-              InputLabelProps={{
-                style: { margin: "5px" },
-              }}
-            />
+            <Grid container justify={"space-between"}>
+              <Grid sm={5} xs={12} md={5}>
+                {/* full name */}
+                <Typography
+                  className={` ${classes.connect_with_us_form}`}
+                  component={"div"}
+                >
+                  <span className={`${classes.required_field}`}>Full Name</span>
+                </Typography>
 
-            {/* email */}
-            <Typography
-              className={` ${classes.connect_with_us_form}`}
-              component={"div"}
-            >
-              <span className={`${classes.required_field}`}>Email</span>
-            </Typography>
-            <TextField
-              id="outlined-basic-2"
-              types={"email"}
-              placeholder={"E-mail"}
-              onChange={(e) => setEmail(e.target.value)}
-              InputLabelProps={{
-                style: { margin: "5px" },
-              }}
-              className={classes.connect_with_us_form_input}
-              autoComplete={"on"}
-              fullWidth={true}
-              required
-            />
+                <TextField
+                  id="outlined-basic"
+                  autoComplete={"on"}
+                  variant={"outlined"}
+                  required
+                  className={classes.connect_with_us_form_input}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder={"Name"}
+                  fullWidth={true}
+                  InputLabelProps={{
+                    style: { margin: "5px" },
+                  }}
+                />
+              </Grid>
+              <Grid sm={5} xs={12} md={5}>
+                {/* email */}
+                <Typography
+                  className={` ${classes.connect_with_us_form}`}
+                  component={"div"}
+                >
+                  <span className={`${classes.required_field}`}>Email</span>
+                </Typography>
+                <TextField
+                  id="outlined-basic-2"
+                  types={"email"}
+                  placeholder={"E-mail"}
+                  variant={"outlined"}
+                  onChange={(e) => setEmail(e.target.value)}
+                  InputLabelProps={{
+                    style: { margin: "5px" },
+                  }}
+                  fullWidth={true}
+                  className={classes.connect_with_us_form_input}
+                  autoComplete={"on"}
+                  required
+                />
+              </Grid>
+            </Grid>
 
             {/* message */}
             <Typography
@@ -487,6 +715,7 @@ const ConnectWithUs = () => {
               id="outlined-multiline-static"
               multiline
               rows={4}
+              variant={"outlined"}
               className={classes.connect_with_us_form_input}
               autoComplete={"on"}
               onChange={(e) => setMessage(e.target.value)}
@@ -531,7 +760,7 @@ const StartUpIndia = () => {
       </Typography>
       <Typography align={"center"} component={"div"}>
         <img
-          src="https://res.cloudinary.com/datalytics/image/upload/v1619338817/Datalytics/image_2_gtzopj.svg"
+          src="https://res.cloudinary.com/datalytics/image/upload/v1622385926/Datalytics/logo_2_xldl0e.svg"
           style={{
             objectFit: "scale-down",
             maxHeight: "300px",
@@ -636,25 +865,48 @@ const Main = () => {
       {/* section-1 */}
       <section className={classes.section_1}>
         <Grid container spacing={1}>
-          <Grid item xs={12} sm={12} md={6} container justify={justifyItems}>
-            <LaptopDescription></LaptopDescription>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6} container justify={justifyItems}>
+          <Grid item xs={12} sm={12} md={12} container justify={justifyItems}>
             <LaptopCarousel></LaptopCarousel>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12} container justify={justifyItems}>
+            <LaptopDescription></LaptopDescription>
           </Grid>
         </Grid>
       </section>
       {/* ------------------------------------------------------------------------------ */}
 
-      {/* sectioin-2 */}
+      {/* section-2 */}
       <section className={classes.section_2}>
         <div className={`${classes.section_2_shape}`}>
-          <div style={{ maxWidth: "100vw", padding: "0px 5vw" }}>
-            <Grid container spacing={5} className={classes.section_2_grid}>
+          <div>
+            <Typography
+              align={"center"}
+              className={classes.section_2_heading}
+              style={{ color: "white" }}
+              component={"div"}
+            >
+              SOLUTION WE PROVIDE
+            </Typography>
+            <Grid
+              container
+              className={classes.section_2_grid}
+              justify={"space-around"}
+            >
               <FeatureCards />
             </Grid>
             {/* <GroupPhoto /> */}
           </div>
+          <div
+            style={{
+              width: "60px",
+              height: "60px",
+              backgroundColor: "white",
+              position: "absolute",
+              top: "-30px",
+              left: "48%",
+              transform: "rotate(45deg)",
+            }}
+          ></div>
         </div>
       </section>
 
@@ -668,46 +920,28 @@ const Main = () => {
         >
           Seamless Integration across Platforms
         </Typography>
-        <img
-          src={
-            "https://res.cloudinary.com/datalytics/image/upload/v1615457959/Datalytics/Integration_Graphic_1_n6zyzw.svg"
-          }
-          className={classes.companies_pics}
-          alt={"companies"}
-        />
+
         <Typography
           align={"center"}
           className={classes.companies_pics_description}
           component={"div"}
         >
-          We understand that it's difficult to adjust in a new development
-          environment. This is why we've built our services around the tools you
-          already have exposure to
+          Readily available success stories & blueprints that can kickstart your
+          automation journey immediately
         </Typography>
       </section>
       {/*  ----------------------------------------------------------------------- */}
       {/* section 4 */}
-      {/* <Cohort /> */}
+      <CompaniesCard />
 
       {/*  ----------------------------------------------------------------------- */}
 
-      {/*  section 5 */}
-      <section
-        className={classes.section_3}
-        style={{ padding: "10px", minHeight: "0px" }}
-      >
-        <img
-          src={
-            "https://res.cloudinary.com/datalytics/image/upload/v1619334198/Datalytics/Group_9_gc6snu.svg"
-          }
-          alt={"data source extension"}
-          className={classes.companies_pics}
-        />
-      </section>
+      {/* section 5 */}
+      <FourDImage></FourDImage>
+
       {/*  ----------------------------------------------------------------------- */}
       {/*  section 6 */}
       <section className={classes.section_5}>
-        <WorkInProgress />
         <ConnectWithUs />
         <StartUpIndia />
       </section>

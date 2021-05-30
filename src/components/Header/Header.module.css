@@ -1,32 +1,50 @@
 .decoration {
   text-decoration: none;
+  color: black;
 }
+
 .navlinks {
   text-decoration: none;
   color: black;
+  background-color: inherit !important;
+}
+.decoration > span,
+.decoration > span > a {
+  border: unset;
+}
+.decoration:hover,
+.decoration:hover > span > a {
+  background-color: #25313c;
+  color: white !important;
+}
+.decoration > span > a {
+  z-index: 11;
 }
 .boxShadow {
   box-shadow: none !important;
 }
 .header {
-  font-size: 32px;
-  padding: 5px 30px;
-  border: 0.5px solid #e5e5e5;
+  font-size: 22px;
+  padding: 40px 120px;
+  /* border: 0.5px solid #e5e5e5; */
   position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12); */
   background: #ffffff;
-  margin-left: -1px;
-  margin-right: -1px;
-  margin-top: -1px;
 }
 .header_logo {
-  height: 108px;
-  width: 144px;
+  height: 63px;
+  width: 63px;
   border-radius: 12px;
   object-fit: cover;
 }
+
 @media only screen and (max-width: 1000px) {
   .header {
     padding: 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .header_logo {
+    justify-content: center;
   }
 }
