@@ -471,7 +471,7 @@ section -2
     justify-content: center;
   }
   .section_2 {
-    margin-top: 20vh;
+    margin-top: 10vh;
   }
 
   /* for mobile design */
@@ -504,7 +504,7 @@ section -2
     font-size: 20px !important;
     line-height: 24px !important;
     color: #ffffff !important;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
   }
   .tilted_box {
     width: 30px !important;
@@ -563,6 +563,12 @@ section -2
     font-size: 16px;
     line-height: 20px;
     padding-top: 10px !important;
+  }
+  .section_2_shape {
+    padding: 50px 0px;
+  }
+  .section_3 {
+    margin-top: 10vh;
   }
 }
 

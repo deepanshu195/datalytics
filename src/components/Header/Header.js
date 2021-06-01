@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     fontSize: "20px",
     lineHeight: "20px",
-    padding: "5px 9px",
+    padding: "3px 3px",
     fontFamily: "Montserrat",
     margin: "0px",
     minWidth: "80px",
@@ -49,8 +49,10 @@ const Header = () => {
   let justifyItems = "flex-start";
   let justifyLogo = "flex-start";
   let displayBlock = "";
-  if (windowWidth < 960) {
+  if (windowWidth < 1200) {
     justifyItems = "center";
+  }
+  if (windowWidth < 900) {
     displayBlock = "none";
   }
   if (windowWidth < 600) {
@@ -81,16 +83,17 @@ const Header = () => {
             md={4}
             lg={5}
             alignContent={"flex-start"}
+            justify={"flex-end"}
             container
           >
             <IconButton
               color="inherit"
               aria-label="open drawer"
               onClick={() => {}}
-              edge="start"
-              // className={clsx(classes.menuButton, open && classes.hide)}
+              // edge="start"
+              style={{ padding: "unset" }}
             >
-              <MenuIcon />
+              <MenuIcon style={{ fontSize: "3rem" }} />
             </IconButton>
           </Grid>
         ) : (

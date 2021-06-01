@@ -37,7 +37,7 @@ let featureCardList = [
   {
     heading: ["Presentation", "Automation"],
     description:
-      "Provide filtered and custom presentations with inbuild charts and backups. Using multiple sources to get a single output in a single interface.",
+      "Provide filtered and custom presentations with built-in charts and backups. Using multiple sources to get a single output in a single interface.",
     className: "margin-top",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459423/Datalytics/presentation_ykgyft.svg",
@@ -45,7 +45,7 @@ let featureCardList = [
   {
     heading: ["Analytical", "Services"],
     description:
-      "Having a set of data and don't know how to process it, Datalytics automated analytical process will help infiltration and automated modeling of data in a given industry.",
+      "Having a set of data and don't know how to process it? Datalytics automated analytical processes will help infiltration and automated modeling of data in a given industry.",
     image:
       "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/analytics_bjjclk.svg",
   },
@@ -183,7 +183,7 @@ const LaptopDescription = () => {
         <span className={classes.break}>
           <br />
         </span>{" "}
-        quality automation of various day to day analytics task such as
+        quality automation of various day to day analytics tasks such as
         visualization, chatbot
         <span className={classes.break}>
           <br />
@@ -198,8 +198,8 @@ const LaptopDescription = () => {
         <span className={classes.break}>
           <br />
         </span>
-        automated and diverting time and effort towards more complex problems.{" "}
-        <br /> <br /> <h2> Incubated & Backed by</h2>
+        be automated and diverting time and effort towards more complex
+        problems. <br /> <br /> <h2> Incubated & Backed by</h2>
       </p>
       <div className={classes.iit_mandi_logo_div}>
         <img
@@ -333,13 +333,13 @@ const FeatureCards = () => {
 
   return featureCardList.map((val, index) => (
     <Grid
-      xs={12}
-      sm={6}
-      md={2}
+      // xs={12}
+      // sm={6}
+      // md={3}
+      // lg={3}
       container
-      spacing={0}
       justify={"space-between"}
-      style={{ position: position, top: width > 960 ? val.top : val.medium }}
+      style={{ position: position, width: "20%" }}
       key={"feature_cards_landing_page" + index}
     >
       <SingleFeatureCard val={val}></SingleFeatureCard>
@@ -511,6 +511,12 @@ export const CompaniesCard = () => {
 };
 
 const FourDImage = () => {
+  let style = {
+    marginBottom: "10vh",
+  };
+  if (window.innerWidth < 600) {
+    style.marginBottom = "unset";
+  }
   let src =
     "https://res.cloudinary.com/datalytics/image/upload/v1622383970/Datalytics/4d_sec_desktop_vir47e.svg";
   let width = "100%";
@@ -520,7 +526,7 @@ const FourDImage = () => {
     width = "-webkit-fill-available";
   }
   return (
-    <Typography style={{ marginTop: "10vh", marginBottom: "10vh" }}>
+    <Typography style={{ marginTop: "10vh", marginBottom: style.marginBottom }}>
       <img src={src} style={{ width: width }}></img>
     </Typography>
   );
