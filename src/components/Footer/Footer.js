@@ -68,9 +68,15 @@ let footerNavLinks = [
 
 const Footer = () => {
   let justify;
+  let copyrightJustify;
   if (window.innerWidth < 960) {
     justify = "center";
+    copyrightJustify = "center";
   }
+  if (window.innerWidth < 550) {
+    justify = "flex-start";
+  }
+
   return (
     <React.Fragment>
       <div className={`${classes.tilted}`}>
@@ -143,7 +149,7 @@ const Footer = () => {
               sm={6}
               md={6}
               container
-              justify={justify || "flex-start"}
+              justify={copyrightJustify || "flex-start"}
               alignContent={"center"}
             >
               &copy; 2020 Datalytics Technologies Pvt. Ltd.

@@ -151,10 +151,10 @@ const LaptopCarousel = () => {
         <Carousel
           showThumbs={false}
           showArrows={true}
-          autoPlay={true}
+          autoPlay={false}
           swipeable={true}
           showIndicators={showIndicators}
-          infiniteLoop={true}
+          infiniteLoop={false}
           showStatus={false}
           stopOnHover={true}
         >
@@ -219,7 +219,27 @@ const LaptopDescription = () => {
 
 const SingleFeatureCard = ({ val }) => {
   const marterialClasses = useStyles();
-
+  let style = {
+    heading: {
+      fontSize: "22px",
+      lineHeight: "27px",
+      fontWeight: "600",
+      textShadow: "0px 4px 15px rgba(0, 0, 0, 0.12)",
+      textAlign: "center",
+    },
+    description: {
+      fontSize: "17px",
+      fontWeight: "normal",
+      textAlign: "center",
+      lineHeight: "21px",
+    },
+  };
+  if (window.innerWidth < 550) {
+    style.heading.fontSize = "18px";
+    style.heading.lineHeight = "22px";
+    style.description.fontSize = "16px";
+    style.description.lineHeight = "22px";
+  }
   return (
     <Card
       style={{
@@ -244,13 +264,7 @@ const SingleFeatureCard = ({ val }) => {
         </Typography>
         <Typography
           className={marterialClasses.featureCardHeading}
-          style={{
-            fontSize: "19px",
-            lineHeight: "23px",
-            fontWeight: "600",
-            textShadow: "0px 4px 15px rgba(0, 0, 0, 0.12)",
-            textAlign: "center",
-          }}
+          style={style.heading}
         >
           {val.heading[0]}
           <br />
@@ -259,12 +273,7 @@ const SingleFeatureCard = ({ val }) => {
       </CardContent>
       <Typography
         className={marterialClasses.featureCardDescription}
-        style={{
-          fontSize: "15px",
-          fontWeight: "normal",
-          textAlign: "center",
-          lineHeight: "18px",
-        }}
+        style={style.description}
       >
         {val.description}
       </Typography>
@@ -391,11 +400,34 @@ export const GroupPhoto = () => {
 };
 
 const SingleCompanyCard = ({ data, style }) => {
+  let compStyle = {
+    heading: {
+      fontSize: "20px",
+      lineHeight: "23px",
+      letterSpacing: "0.05em",
+      textAlign: "initial",
+    },
+    description: {
+      fontSize: "14px",
+      lineHeight: "16px",
+      marginTop: "16px",
+      textAlign: "initial",
+    },
+    image: {
+      width: "100px",
+      height: "100px",
+    },
+  };
+  if (window.innerWidth < 500) {
+    compStyle.image.width = "75px";
+    compStyle.image.height = "75px";
+  }
+
   return (
     <Card style={style}>
       <CardContent style={{ display: "flex" }}>
         <Typography style={{ marginRight: "30px", display: "flex" }}>
-          <img src={data.img} style={{ width: "100px", height: "100px" }} />
+          <img src={data.img} style={compStyle.image} />
         </Typography>
         <Typography
           style={{
@@ -404,24 +436,8 @@ const SingleCompanyCard = ({ data, style }) => {
             flexDirection: "column",
           }}
         >
-          <Typography
-            style={{
-              fontSize: "20px",
-              lineHeight: "23px",
-              letterSpacing: "0.05em",
-              textAlign: "initial",
-            }}
-          >
-            {data.name}
-          </Typography>
-          <Typography
-            style={{
-              fontSize: "14px",
-              lineHeight: "16px",
-              marginTop: "16px",
-              textAlign: "initial",
-            }}
-          >
+          <Typography style={compStyle.heading}>{data.name}</Typography>
+          <Typography style={compStyle.description}>
             {data.description}
           </Typography>
         </Typography>
@@ -749,108 +765,111 @@ const ConnectWithUs = () => {
   );
 };
 const StartUpIndia = () => {
-  return (
-    <>
-      <Typography
-        align={"center"}
-        className={classes.reconginzed_by}
-        component={"div"}
-      >
-        Recongnized by
-      </Typography>
-      <Typography align={"center"} component={"div"}>
-        <img
-          src="https://res.cloudinary.com/datalytics/image/upload/v1622385926/Datalytics/logo_2_xldl0e.svg"
-          style={{
-            objectFit: "scale-down",
-            maxHeight: "300px",
-            maxWidth: "300px",
-            marginTop: "20px",
-          }}
-        ></img>
-      </Typography>
-    </>
-  );
-};
-const Cohort = () => {
-  return (
-    <div className={classes.tilted}>
-      <Typography align={"center"} className={classes.cohort_heading}>
-        Cohorts
-      </Typography>
-      <Typography align={"center"} className={classes.cohort_description}>
-        The minds behind
-      </Typography>
-      <Grid
-        container
-        spacing={1}
-        style={{ maxWidth: "100vw", margin: "unset" }}
-      >
-        <Grid item xs={12} sm={12} md={6} container justify={"center"}>
-          <Card className={classes.cohort_card}>
-            <img
-              src={
-                "http://www.gstatic.com/tv/thumb/persons/487130/487130_v9_bb.jpg"
-              }
-              alt={"elon"}
-              className={classes.cohort_image}
-            ></img>
-            <Typography align={"center"} className={classes.cohort_founder}>
-              VIDHAN
-            </Typography>
-            <Typography
-              align={"center"}
-              className={classes.cohort_founder_portfolio}
-            >
-              Portfolio
-            </Typography>
-            <Typography align={"center"} style={{ marginTop: "20px" }}>
-              <a href={"/"} className={classes.social_links}>
-                <LinkedInIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-              <a href={"/"} className={classes.social_links}>
-                <FacebookIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-              <a href={"/"} className={classes.social_links}>
-                <InstagramIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-            </Typography>
-          </Card>
+  if (window.innerWidth > 550) {
+    return (
+      <>
+        <Typography
+          align={"center"}
+          className={classes.reconginzed_by}
+          component={"div"}
+        >
+          Recongnized by
+        </Typography>
+        <Typography align={"center"} component={"div"}>
+          <img
+            src="https://res.cloudinary.com/datalytics/image/upload/v1622385926/Datalytics/logo_2_xldl0e.svg"
+            style={{
+              objectFit: "scale-down",
+              maxHeight: "300px",
+              maxWidth: "300px",
+              marginTop: "20px",
+            }}
+          ></img>
+        </Typography>
+      </>
+    );
+  }
+  const Cohort = () => {
+    return (
+      <div className={classes.tilted}>
+        <Typography align={"center"} className={classes.cohort_heading}>
+          Cohorts
+        </Typography>
+        <Typography align={"center"} className={classes.cohort_description}>
+          The minds behind
+        </Typography>
+        <Grid
+          container
+          spacing={1}
+          style={{ maxWidth: "100vw", margin: "unset" }}
+        >
+          <Grid item xs={12} sm={12} md={6} container justify={"center"}>
+            <Card className={classes.cohort_card}>
+              <img
+                src={
+                  "http://www.gstatic.com/tv/thumb/persons/487130/487130_v9_bb.jpg"
+                }
+                alt={"elon"}
+                className={classes.cohort_image}
+              ></img>
+              <Typography align={"center"} className={classes.cohort_founder}>
+                VIDHAN
+              </Typography>
+              <Typography
+                align={"center"}
+                className={classes.cohort_founder_portfolio}
+              >
+                Portfolio
+              </Typography>
+              <Typography align={"center"} style={{ marginTop: "20px" }}>
+                <a href={"/"} className={classes.social_links}>
+                  <LinkedInIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+                <a href={"/"} className={classes.social_links}>
+                  <FacebookIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+                <a href={"/"} className={classes.social_links}>
+                  <InstagramIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} container justify={"center"}>
+            <Card className={classes.cohort_card}>
+              <img
+                src={
+                  "http://www.gstatic.com/tv/thumb/persons/487130/487130_v9_bb.jpg"
+                }
+                alt={"elon"}
+                className={classes.cohort_image}
+              ></img>
+              <Typography align={"center"} className={classes.cohort_founder}>
+                VIDHAN
+              </Typography>
+              <Typography
+                align={"center"}
+                className={classes.cohort_founder_portfolio}
+              >
+                Portfolio
+              </Typography>
+              <Typography align={"center"} style={{ marginTop: "20px" }}>
+                <a href={"/"} className={classes.social_links}>
+                  <LinkedInIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+                <a href={"/"} className={classes.social_links}>
+                  <FacebookIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+                <a href={"/"} className={classes.social_links}>
+                  <InstagramIcon style={{ width: "40px", height: "40px" }} />
+                </a>
+              </Typography>
+            </Card>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} container justify={"center"}>
-          <Card className={classes.cohort_card}>
-            <img
-              src={
-                "http://www.gstatic.com/tv/thumb/persons/487130/487130_v9_bb.jpg"
-              }
-              alt={"elon"}
-              className={classes.cohort_image}
-            ></img>
-            <Typography align={"center"} className={classes.cohort_founder}>
-              VIDHAN
-            </Typography>
-            <Typography
-              align={"center"}
-              className={classes.cohort_founder_portfolio}
-            >
-              Portfolio
-            </Typography>
-            <Typography align={"center"} style={{ marginTop: "20px" }}>
-              <a href={"/"} className={classes.social_links}>
-                <LinkedInIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-              <a href={"/"} className={classes.social_links}>
-                <FacebookIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-              <a href={"/"} className={classes.social_links}>
-                <InstagramIcon style={{ width: "40px", height: "40px" }} />
-              </a>
-            </Typography>
-          </Card>
-        </Grid>
-      </Grid>
-    </div>
-  );
+      </div>
+    );
+  };
+  return "";
 };
 
 const Main = () => {
@@ -896,17 +915,7 @@ const Main = () => {
             </Grid>
             {/* <GroupPhoto /> */}
           </div>
-          <div
-            style={{
-              width: "60px",
-              height: "60px",
-              backgroundColor: "white",
-              position: "absolute",
-              top: "-30px",
-              left: "48%",
-              transform: "rotate(45deg)",
-            }}
-          ></div>
+          <div className={classes.tilted_box}></div>
         </div>
       </section>
 
