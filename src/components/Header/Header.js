@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,12 +54,12 @@ const Header = () => {
     displayBlock = "none";
   }
   if (windowWidth < 600) {
-    justifyLogo = "center";
+    // justifyLogo = "center";
   }
   return (
     <div className={`${materialUiClasses.root} ${classes.header}`}>
       <Grid container spacing={1}>
-        <Grid xs={12} sm={2} md={4} lg={5} justify={justifyLogo} container>
+        <Grid xs={10} sm={2} md={4} lg={5} justify={justifyLogo} container>
           <Paper className={`${materialUiClasses.paper} ${classes.boxShadow}`}>
             <a href="/">
               <img
@@ -71,120 +73,147 @@ const Header = () => {
             </a>
           </Paper>
         </Grid>
-        <Grid container xs={12} sm={10} md={8} lg={7}>
+
+        {window.innerWidth <= 600 ? (
           <Grid
+            xs={2}
+            sm={2}
+            md={4}
+            lg={5}
+            alignContent={"flex-start"}
             container
-            item
-            // xs={6}
-            sm={0}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-            style={{ display: displayBlock }}
           >
-            {/* empty space */}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={6}
-            sm={4}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-          >
-            <Paper
-              className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => {}}
+              edge="start"
+              // className={clsx(classes.menuButton, open && classes.hide)}
             >
-              <NavLink to={"/"} className={`${classes.navlinks}`}>
-                Demo
-              </NavLink>
-            </Paper>
+              <MenuIcon />
+            </IconButton>
           </Grid>
-          <Grid
-            container
-            item
-            xs={6}
-            sm={4}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-          >
-            <Paper
-              className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+        ) : (
+          ""
+        )}
+        {window.innerWidth > 600 ? (
+          <Grid container xs={12} sm={10} md={8} lg={7}>
+            <Grid
+              container
+              item
+              // xs={6}
+              sm={0}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
+              style={{ display: displayBlock }}
             >
-              <NavLink to={"/"} className={`${classes.navlinks}`}>
-                Solutions
-              </NavLink>
-            </Paper>
-          </Grid>
-          <Grid
-            container
-            item
-            xs={6}
-            sm={4}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-          >
-            <Paper
-              className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+              {/* empty space */}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={6}
+              sm={4}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
             >
-              <NavLink to={"/"} className={`${classes.navlinks}`}>
-                Pricing
-              </NavLink>
-            </Paper>
-          </Grid>
-          <Grid
-            container
-            item
-            xs={6}
-            sm={4}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-          >
-            <Paper
-              className={`${materialUiClasses.paper} ${classes.boxShadow}`}
-            >
-              <NavLink to={"/"} className={`${classes.navlinks}`}>
-                Services
-              </NavLink>
-            </Paper>
-          </Grid>
-          <Grid
-            container
-            item
-            xs={6}
-            sm={4}
-            md={2}
-            lg={2}
-            justify={justifyItems}
-            alignItems={"center"}
-          >
-            <Paper
-              className={`${materialUiClasses.paper} ${classes.boxShadow}`}
-            >
-              <Button
-                className={`${materialUiClasses.button} ${classes.decoration}`}
-                // variant="outlined"
+              <Paper
+                className={`${materialUiClasses.paper} ${classes.boxShadow}`}
               >
-                <NavLink
-                  to={`/login`}
-                  draggable={false}
-                  className={`${materialUiClasses.button} ${classes.decoration}`}
-                >
-                  Sign In
+                <NavLink to={"/"} className={`${classes.navlinks}`}>
+                  Demo
                 </NavLink>
-              </Button>
-            </Paper>
+              </Paper>
+            </Grid>
+            <Grid
+              container
+              item
+              xs={6}
+              sm={4}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
+            >
+              <Paper
+                className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+              >
+                <NavLink to={"/"} className={`${classes.navlinks}`}>
+                  Solutions
+                </NavLink>
+              </Paper>
+            </Grid>
+            <Grid
+              container
+              item
+              xs={6}
+              sm={4}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
+            >
+              <Paper
+                className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+              >
+                <NavLink to={"/"} className={`${classes.navlinks}`}>
+                  Pricing
+                </NavLink>
+              </Paper>
+            </Grid>
+            <Grid
+              container
+              item
+              xs={6}
+              sm={4}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
+            >
+              <Paper
+                className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+              >
+                <NavLink to={"/"} className={`${classes.navlinks}`}>
+                  Services
+                </NavLink>
+              </Paper>
+            </Grid>
+            <Grid
+              container
+              item
+              xs={6}
+              sm={4}
+              md={2}
+              lg={2}
+              justify={justifyItems}
+              alignItems={"center"}
+            >
+              <Paper
+                className={`${materialUiClasses.paper} ${classes.boxShadow}`}
+              >
+                <Button
+                  className={`${materialUiClasses.button} ${classes.decoration}`}
+                  // variant="outlined"
+                >
+                  <NavLink
+                    to={`/login`}
+                    draggable={false}
+                    className={`${materialUiClasses.button} ${classes.decoration}`}
+                  >
+                    Sign In
+                  </NavLink>
+                </Button>
+              </Paper>
+            </Grid>
           </Grid>
-        </Grid>
+        ) : (
+          ""
+        )}
       </Grid>
     </div>
   );

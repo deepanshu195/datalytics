@@ -476,6 +476,9 @@ section -2
 
   /* for mobile design */
 
+  .section_1 {
+    margin-top: unset !important;
+  }
   .main_heading {
     color: black;
     text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
