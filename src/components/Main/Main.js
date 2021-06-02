@@ -50,7 +50,7 @@ let featureCardList = [
       "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/analytics_bjjclk.svg",
   },
   {
-    heading: ["Chatbot", "Assistance"],
+    heading: ["Chatbot", "assistance"],
     description:
       "Customized to answer all your questions, it will help you in understanding processes that can be applied as well as provide the right guidance and inference .",
     image:
@@ -184,7 +184,7 @@ const LaptopDescription = () => {
           <br />
         </span>{" "}
         quality automation of various day to day analytics tasks such as
-        visualization, chatbot
+        visualization, chatbot&nbsp;
         <span className={classes.break}>
           <br />
         </span>
@@ -339,7 +339,7 @@ const FeatureCards = () => {
       // lg={3}
       container
       justify={"space-between"}
-      style={{ position: position, width: "20%" }}
+      style={{ position: position, width: "22%" }}
       key={"feature_cards_landing_page" + index}
     >
       <SingleFeatureCard val={val}></SingleFeatureCard>
