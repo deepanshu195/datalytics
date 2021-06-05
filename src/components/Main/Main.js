@@ -941,8 +941,8 @@ const Main = () => {
           className={classes.companies_pics_description}
           component={"div"}
         >
-          Readily available success stories & blueprints that can kickstart your
-          automation journey immediately
+          Readily available success stories and blueprints that can kickstart
+          your automation journey immediately
         </Typography>
       </section>
       {/*  ----------------------------------------------------------------------- */}
