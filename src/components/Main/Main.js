@@ -302,7 +302,7 @@ const FeatureCards = () => {
       <Carousel
         showThumbs={false}
         showArrows={true}
-        autoPlay={false}
+        autoPlay={true}
         swipeable={true}
         showIndicators={false}
         infiniteLoop={true}
@@ -339,7 +339,7 @@ const FeatureCards = () => {
       // lg={3}
       container
       justify={"space-between"}
-      style={{ position: position, width: "22%" }}
+      style={{ position: position, width: "20.5%" }}
       key={"feature_cards_landing_page" + index}
     >
       <SingleFeatureCard val={val}></SingleFeatureCard>
@@ -518,7 +518,7 @@ const FourDImage = () => {
     style.marginBottom = "unset";
   }
   let src =
-    "https://res.cloudinary.com/datalytics/image/upload/v1622383970/Datalytics/4d_sec_desktop_vir47e.svg";
+    "https://res.cloudinary.com/datalytics/image/upload/v1623135103/Datalytics/Design_3x_xsugr1.png";
   let width = "100%";
   if (window.innerWidth < 600) {
     src =

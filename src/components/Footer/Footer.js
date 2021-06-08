@@ -40,7 +40,7 @@ let footerNavLinks = [
       { name: "Chatbot Assistance", link: "" },
       { name: "Report Generation", link: "" },
     ],
-    sm: 4,
+    sm: 3,
   },
   {
     name: "Resource",
@@ -82,7 +82,11 @@ const Footer = () => {
       <div className={`${classes.tilted}`}>
         <Grid
           container
-          style={{ margin: "unset", maxWidth: "80%", margin: "auto" }}
+          style={{
+            maxWidth: "1200px",
+            margin: "auto",
+            justifyContent: "space-between",
+          }}
         >
           {footerNavLinks.map((val, index) => (
             <Grid
@@ -138,7 +142,7 @@ const Footer = () => {
               item
               xs={12}
               sm={4}
-              md={4}
+              md={5}
               style={{ width: "100%" }}
               container
               justify={justify || "flex-start"}
