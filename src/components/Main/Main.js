@@ -40,28 +40,28 @@ let featureCardList = [
       "Provide filtered and custom presentations with built-in charts and backups. Using multiple sources to get a single output in a single interface.",
     className: "margin-top",
     image:
-      "https://res.cloudinary.com/datalytics/image/upload/v1615459423/Datalytics/presentation_ykgyft.svg",
+      "https://res.cloudinary.com/datalytics/image/upload/v1623226375/Datalytics/presentation_1_tah7um.svg",
   },
   {
     heading: ["Analytical", "Services"],
     description:
       "Having a set of data and don't know how to process it? Datalytics automated analytical processes will help infiltration and automated modeling of data in a given industry.",
     image:
-      "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/analytics_bjjclk.svg",
+      "https://res.cloudinary.com/datalytics/image/upload/v1623226375/Datalytics/pie-chart_1_setbxf.svg",
   },
   {
     heading: ["Chatbot", "assistance"],
     description:
       "Customized to answer all your questions, it will help you in understanding processes that can be applied as well as provide the right guidance and inference .",
     image:
-      "https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/chatbot_qrvtad.svg",
+      "https://res.cloudinary.com/datalytics/image/upload/v1623226375/Datalytics/speak_1_acgwj5.svg",
   },
   {
     heading: ["Report", "Generation"],
     description:
       "Need a customized and automated report, the report generator provides automated project reports including all the elements generated and customized through drag and drop.",
     image:
-      "https://res.cloudinary.com/datalytics/image/upload/v1615459423/Datalytics/reports_wqkmlh.svg",
+      "https://res.cloudinary.com/datalytics/image/upload/v1623226375/Datalytics/clipboard_1_wqgpai.svg",
   },
 ];
 
@@ -137,6 +137,7 @@ const LaptopCarousel = () => {
   }
   if (window.innerWidth < 660) {
     showIndicators = false;
+    style.marginTop = "2vh";
   }
   return (
     <div style={{ position: "relative", ...style }}>
@@ -199,18 +200,25 @@ const LaptopDescription = () => {
           <br />
         </span>
         be automated and diverting time and effort towards more complex
-        problems. <br /> <br /> <h2> Incubated & Backed by</h2>
+        problems.
+        <div className={classes.backed_by}> Incubated & Backed by</div>
       </p>
       <div className={classes.iit_mandi_logo_div}>
         <img
-          src="https://res.cloudinary.com/datalytics/image/upload/v1615459421/Datalytics/iit_mandi_logo_vgdde5.svg"
+          src="https://res.cloudinary.com/datalytics/image/upload/v1623220899/Datalytics/image_28_atwfog.svg"
           alt={"IIT Mandi Logo"}
-          style={{ width: "200px", marginRight: "40px" }}
+          // style={{
+          //   width: "179px",
+          //   height: "84px",
+          //   marginRight: "40px",
+          // }}
+          className={classes.iit_mandi_catalyst_logo}
         ></img>
         <img
-          src="https://res.cloudinary.com/datalytics/image/upload/v1616042075/Datalytics/PadUp_fqlzid.png"
+          src="https://res.cloudinary.com/datalytics/image/upload/v1623221030/Datalytics/Untitled-1_2_e4cmoj.svg"
           alt={"Pad up logo"}
-          style={{ height: "50px", width: "150px", objectFit: "contain" }}
+          // style={{ width: "202px", height: "94px", objectFit: "contain" }}
+          className={classes.padup_ventures}
         />
       </div>
     </div>
@@ -225,12 +233,11 @@ const SingleFeatureCard = ({ val }) => {
       lineHeight: "27px",
       fontWeight: "600",
       textShadow: "0px 4px 15px rgba(0, 0, 0, 0.12)",
-      textAlign: "center",
+      // textAlign: "center",
     },
     description: {
       fontSize: "17px",
       fontWeight: "normal",
-      textAlign: "center",
       lineHeight: "21px",
     },
   };
@@ -239,6 +246,7 @@ const SingleFeatureCard = ({ val }) => {
     style.heading.lineHeight = "22px";
     style.description.fontSize = "16px";
     style.description.lineHeight = "22px";
+    style.description.textAlign = "start";
   }
   return (
     <Card
@@ -251,14 +259,17 @@ const SingleFeatureCard = ({ val }) => {
         borderTopRightRadius: "35px",
         padding: "25px",
         cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
       className={`${classes.feature_card_hover}`}
     >
-      <CardContent>
-        <Typography align={"center"}>
+      <CardContent style={{ padding: "unset", paddingBottom: "10px" }}>
+        <Typography>
           <img
             src={val.image}
-            style={{ width: "60px", textAlign: "center" }}
+            style={{ width: "60px" }}
             alt={"feature cards"}
           />
         </Typography>
@@ -277,6 +288,7 @@ const SingleFeatureCard = ({ val }) => {
       >
         {val.description}
       </Typography>
+      <Typography align={"right"}>{"See More >"}</Typography>
     </Card>
   );
 };
@@ -333,10 +345,6 @@ const FeatureCards = () => {
 
   return featureCardList.map((val, index) => (
     <Grid
-      // xs={12}
-      // sm={6}
-      // md={3}
-      // lg={3}
       container
       justify={"space-between"}
       style={{ position: position, width: "20.5%" }}
@@ -411,7 +419,7 @@ const SingleCompanyCard = ({ data, style }) => {
       fontSize: "14px",
       lineHeight: "16px",
       marginTop: "16px",
-      textAlign: "initial",
+      textAlign: "start",
     },
     image: {
       width: "100px",
@@ -512,21 +520,26 @@ export const CompaniesCard = () => {
 
 const FourDImage = () => {
   let style = {
-    marginBottom: "10vh",
+    marginBottom: "unset",
+    marginTop: "70px",
   };
+
   if (window.innerWidth < 600) {
     style.marginBottom = "unset";
   }
   let src =
-    "https://res.cloudinary.com/datalytics/image/upload/v1623135103/Datalytics/Design_3x_xsugr1.png";
+    "https://res.cloudinary.com/datalytics/image/upload/v1623223613/Datalytics/Section_4_1800x900_jalziz.png";
   let width = "100%";
   if (window.innerWidth < 600) {
     src =
       "https://res.cloudinary.com/datalytics/image/upload/v1622383970/Datalytics/4d_sec_mobile_bnc8le.svg";
     width = "-webkit-fill-available";
+    style.marginTop = "54px";
   }
   return (
-    <Typography style={{ marginTop: "10vh", marginBottom: style.marginBottom }}>
+    <Typography
+      style={{ marginTop: style.marginTop, marginBottom: style.marginBottom }}
+    >
       <img src={src} style={{ width: width }}></img>
     </Typography>
   );
@@ -652,10 +665,18 @@ const ConnectWithUs = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+  let marginTop = "80px";
+  if (window.innerWidth < 600) {
+    marginTop = "10px";
+  }
 
   return (
     <div
-      style={{ display: "flex", justifyContent: "center", marginTop: "10vh" }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginTop: marginTop,
+      }}
     >
       <div className={classes.connect_with_us}>
         <div className={classes.connect_with_us_div}>
@@ -663,38 +684,21 @@ const ConnectWithUs = () => {
             Connect With Us
           </Typography>
 
-          <Typography
-            align={"center"}
-            className={classes.stay_in_touch}
-            component={"div"}
-          >
-            Let’s stay in touch through our newsletter!
-          </Typography>
-
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              // subscribe({ name, email, message });
             }}
           >
             <Grid container justify={"space-between"}>
               <Grid sm={5} xs={12} md={5}>
-                {/* full name */}
-                <Typography
-                  className={` ${classes.connect_with_us_form}`}
-                  component={"div"}
-                >
-                  <span className={`${classes.required_field}`}>Full Name</span>
-                </Typography>
-
                 <TextField
                   id="outlined-basic"
                   autoComplete={"on"}
                   variant={"outlined"}
-                  required
+                  required={true}
                   className={classes.connect_with_us_form_input}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder={"Name"}
+                  label={"Full Name"}
                   fullWidth={true}
                   InputLabelProps={{
                     style: { margin: "5px" },
@@ -702,17 +706,10 @@ const ConnectWithUs = () => {
                 />
               </Grid>
               <Grid sm={5} xs={12} md={5}>
-                {/* email */}
-                <Typography
-                  className={` ${classes.connect_with_us_form}`}
-                  component={"div"}
-                >
-                  <span className={`${classes.required_field}`}>Email</span>
-                </Typography>
                 <TextField
                   id="outlined-basic-2"
                   types={"email"}
-                  placeholder={"E-mail"}
+                  label={"E-mail"}
                   variant={"outlined"}
                   onChange={(e) => setEmail(e.target.value)}
                   InputLabelProps={{
@@ -721,18 +718,10 @@ const ConnectWithUs = () => {
                   fullWidth={true}
                   className={classes.connect_with_us_form_input}
                   autoComplete={"on"}
-                  required
+                  required={true}
                 />
               </Grid>
             </Grid>
-
-            {/* message */}
-            <Typography
-              className={` ${classes.connect_with_us_form}`}
-              component={"div"}
-            >
-              <span>Any message for us ?</span>
-            </Typography>
             <TextField
               id="outlined-multiline-static"
               multiline
@@ -745,12 +734,11 @@ const ConnectWithUs = () => {
               InputLabelProps={{
                 style: { margin: "5px" },
               }}
-              placeholder={"Message"}
+              label={" Any message for us "}
             />
             <Typography
               align={"center"}
               style={{
-                marginTop: "20px",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -761,7 +749,7 @@ const ConnectWithUs = () => {
                 className={classes.bookSessionButton}
                 style={{ margin: "unset", marginRight: "0px" }}
               >
-                SUBSCRIBE
+                Submit
               </Button>
             </Typography>
           </form>
@@ -786,9 +774,9 @@ const StartUpIndia = () => {
             src="https://res.cloudinary.com/datalytics/image/upload/v1622385926/Datalytics/logo_2_xldl0e.svg"
             style={{
               objectFit: "scale-down",
-              maxHeight: "300px",
-              maxWidth: "300px",
-              marginTop: "20px",
+              marginTop: "50px",
+              width: "400px",
+              height: "104px",
             }}
           ></img>
         </Typography>

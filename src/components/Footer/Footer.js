@@ -117,7 +117,10 @@ const Footer = () => {
               <Typography component={"div"}>
                 {window.innerWidth > 960
                   ? val.description.map((innerLinks) => (
-                      <Typography component={"div"}>
+                      <Typography
+                        component={"div"}
+                        style={{ marginBottom: "5px" }}
+                      >
                         <NavLink
                           to={innerLinks.link}
                           draggable={false}
@@ -133,32 +136,7 @@ const Footer = () => {
           ))}
         </Grid>
         <div className={classes.footer_logo_box}>
-          <Grid
-            container
-            spacing={5}
-            style={{ width: "100%", padding: "10px 0px" }}
-          >
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              md={5}
-              style={{ width: "100%" }}
-              container
-              justify={justify || "flex-start"}
-            ></Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={6}
-              container
-              justify={copyrightJustify || "flex-start"}
-              alignContent={"center"}
-            >
-              &copy; 2020 Datalytics Technologies Pvt. Ltd.
-            </Grid>
-          </Grid>
+          &copy; 2020 Datalytics Technologies Pvt. Ltd.
         </div>
       </div>
     </React.Fragment>

@@ -25,27 +25,31 @@
 }
 .main_heading {
   color: black;
+  margin: unset;
   text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
   line-height: 61px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .main_description {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 27px;
   color: black;
   text-align: center;
+  margin: unset;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
 }
 
 .section_1 {
   display: flex;
   justify-content: space-between;
   margin: 0vh 5vw;
-  min-height: 63vh;
+  /* min-height: 63vh; */
   display: flex;
   align-items: center;
   margin-top: 5vh;
@@ -56,8 +60,26 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 40px !important;
 }
-
+.backed_by {
+  font-family: inherit !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  margin-top: 40px;
+}
+.iit_mandi_catalyst_logo {
+  width: 179px;
+  height: 84px;
+  margin-right: 40px;
+}
+.padup_ventures {
+  width: 202px;
+  height: 94px;
+  object-fit: contain;
+}
 /* 
 section -2
 */
@@ -143,6 +165,7 @@ section -2
 
 .section_2 {
   max-width: 100vw;
+  margin-top: 42px;
 }
 .section_2_heading {
   font-family: inherit !important;
@@ -152,7 +175,7 @@ section -2
   line-height: 78px !important;
 
   color: #ffffff !important;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 .feature_card_hover {
   transition: all 0.4s ease-in-out !important;
@@ -163,9 +186,9 @@ section -2
 }
 
 .section_3 {
-  margin-top: 5vh;
+  margin-top: 80px;
   /* min-height: 100vh; */
-  margin-bottom: 10vh;
+  margin-bottom: 80px;
 
   display: flex;
   justify-content: center;
@@ -220,10 +243,11 @@ section -2
   /* or  */
 }
 .section_5 {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .connect_with_us_pic_desc {
   font-weight: 500;
@@ -255,13 +279,16 @@ section -2
 }
 
 .connect_with_us_text {
-  font-weight: bold !important;
   font-size: 36px !important;
   line-height: 44px !important;
   /* identical to box height */
   color: black !important;
   /* text-shadow: 0px 3.14749px 3.14749px rgba(0, 0, 0, 0.25) !important; */
   font-family: inherit !important;
+  margin-bottom: 64px !important;
+
+  font-style: normal;
+  font-weight: 500;
 }
 .stay_in_touch {
   font-weight: 500 !important;
@@ -271,27 +298,30 @@ section -2
   font-family: inherit !important;
   margin-top: 16px !important;
 }
-.required_field::after {
+/* .connect_with_us_form_input::after {
   content: "*";
   color: red;
   /* float: right; */
-}
 .connect_with_us_form {
   margin-top: 25px !important;
   font-family: inherit !important;
 }
 .connect_with_us_form_input {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 5px;
-  margin-top: 10px !important;
+  /* margin-top: 10px !important; */
   /* outline: none; */
   padding-left: 4px !important;
   padding-right: 4px !important;
   font-family: inherit !important;
 
-  padding-top: 10px !important;
+  padding-bottom: 32px !important;
 
   /* width: 100%; */
+}
+.required_field::placeholder:after {
+  content: " *" !important;
+  color: red !important;
 }
 
 /* cohort section */
@@ -366,16 +396,16 @@ section -2
   border: 2px solid #ff5614 !important;
   outline: unset !important;
   border-radius: 10px !important;
-  /* margin-right: 100px !important; */
-  margin-top: 15px !important;
   font-family: inherit !important;
   font-size: 18px !important;
+  width: 144px !important;
+  height: 46px !important;
 }
 .reconginzed_by {
   font-family: inherit !important;
   font-size: 36px !important;
   line-height: 44px !important;
-  margin-top: 5vh !important;
+  margin-top: 80px !important;
 }
 
 .bookSessionButton:hover {
@@ -468,10 +498,14 @@ section -2
     width: 100%;
   }
   .iit_mandi_logo_div {
+    margin-top: unset !important;
     justify-content: center;
   }
+  .iit_mandi_logo_div img {
+    margin-top: 20px;
+  }
   .section_2 {
-    margin-top: 10vh;
+    margin-top: 20px;
   }
 
   /* for mobile design */
@@ -488,7 +522,22 @@ section -2
     font-size: 24px;
     line-height: 29px;
   }
-
+  .backed_by {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 24px;
+  }
+  .iit_mandi_catalyst_logo {
+    width: 92px;
+    height: 43px;
+    margin-right: 40px;
+  }
+  .padup_ventures {
+    width: 100px;
+    height: 45px;
+  }
   .main_description {
     font-weight: normal;
     color: black;
@@ -504,7 +553,7 @@ section -2
     font-size: 20px !important;
     line-height: 24px !important;
     color: #ffffff !important;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   .tilted_box {
     width: 30px !important;
@@ -554,21 +603,23 @@ section -2
     margin-top: 16px !important;
   }
   .connect_with_us_form_input {
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin-top: 10px !important;
+    /* background-color: #ffffff; */
+    /* border-radius: 5px; */
     padding-left: 4px !important;
     padding-right: 4px !important;
-    font-family: inherit !important;
+    /* font-family: inherit !important; */
     font-size: 16px;
     line-height: 20px;
-    padding-top: 10px !important;
   }
   .section_2_shape {
-    padding: 50px 0px;
+    padding: 55px 0px;
   }
   .section_3 {
-    margin-top: 10vh;
+    margin-top: 58px;
+    margin-bottom: 48px;
+  }
+  .section_5 {
+    margin-bottom: 20px;
   }
 }
 

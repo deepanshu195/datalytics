@@ -32,6 +32,8 @@
   max-width: 100vw !important;
   font-size: 20px;
   line-height: 24px;
+  padding: "10px 0px";
+  text-align: center;
 }
 
 @media only screen and (max-width: 550px) {
@@ -42,7 +44,7 @@
     text-align: center;
   }
   .tilted {
-    padding: 40px 10px 1px;
+    padding: 40px 24px 1px;
   }
   .footer_logo_box {
     margin-top: unset;
